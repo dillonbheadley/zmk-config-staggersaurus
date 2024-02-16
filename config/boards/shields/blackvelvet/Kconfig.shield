@@ -1,0 +1,5 @@
+config SHIELD_STAGGERSAURUS_LEFT
+    def_bool $(shields_list_contains,staggersaurus_left)
+
+config SHIELD_STAGGERSAURUS_RIGHT
+    def_bool $(shields_list_contains,staggersaurus_right)

@@ -1,0 +1,11 @@
+file_format: "1"
+id: staggersaurus
+name: Staggersaurus
+type: shield
+url: https://github.com/dillonbheadley/zmk-config-staggersaurus/
+requires: [pro_micro]
+features:
+  - keys
+siblings:
+  - staggersaurus_left
+  - staggersaurus_right
