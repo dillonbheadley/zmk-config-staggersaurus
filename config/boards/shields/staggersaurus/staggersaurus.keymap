@@ -154,7 +154,7 @@
         &kp ESC   &kp TAB   &kp ENTER     &kp SPC     &kp BKSP          &trans        &kp LG(LEFT)    &kp LC(MINUS)   &kp LG(RIGHT)   &kp DEL 
                                   &trans  &trans  &trans                &mo MEDIA  &kp BKSP  &trans
       >;
-      sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp LS(LG(Z)) LG(Z)>;
+      sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp LG(TAB) LS(LG(TAB))>;
     };
       
     symbols_layer { // doubles / ? < > ' " (semi/colon to default?)
@@ -164,7 +164,7 @@
         &kp LT    &kp LBKT  &kp LPAR    &kp LBRC  &kp BSLH        &kp FSLH    &kp RBRC  &kp RPAR    &kp RBKT    &kp GT
                                 &trans  &kp LGUI  &kp LSFT        &trans  &mo MEDIA  &trans
       >;
-      sensor-bindings = <&inc_dec_kp LG(TAB) LS(LG(TAB)) &inc_dec_kp C_VOL_UP C_VOL_DN>;
+      sensor-bindings = <&inc_dec_kp LS(LG(Z)) LG(Z) &inc_dec_kp C_VOL_UP C_VOL_DN>;
     };	
 
     number_layer {
@@ -174,7 +174,7 @@
         &kp ESC   &kp TAB   &kp ENTER     &kp SPC     &kp BKSP       &kp EQUAL  &kp N7  &kp N8  &kp N9  &kp DOT   
                                   &trans  &mo MEDIA  &trans          &kp N0  &kp BKSP  &trans
       >;
-      sensor-bindings = <&inc_dec_kp C_BRI_UP C_BRI_DN &inc_dec_kp PG_UP PG_DN>;
+      sensor-bindings = <&inc_dec_kp C_BRI_UP C_BRI_DN &inc_dec_kp PG_DN PG_UP>;
     };
 
     media_layer {
