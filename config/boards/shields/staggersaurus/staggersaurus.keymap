@@ -125,7 +125,7 @@
         &kp Z        &kp X        &kp C        &kp V        &kp B           &kp N  &kp M        &kp CMMA     &kp DOT      &kp FSLH
                           &key_repeat  &ml NAV LGUI  &ml NUMB LSFT          &hlt SYMB ENTER  &kp SPACE  &tog GAME
       >;
-      sensor-bindings = <&inc_dec_kp C_BRI_UP C_BRI_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
+      sensor-bindings = <&inc_dec_kp C_BRI_UP C_BRI_DN &inc_dec_kp C_VOL_DN C_VOL_UP>;
     };
 
     // engram
@@ -154,7 +154,7 @@
         &kp ESC   &kp TAB   &kp ENTER     &kp SPC     &kp BKSP          &trans        &kp LG(LEFT)    &kp LC(MINUS)   &kp LG(RIGHT)   &kp DEL 
                                   &trans  &trans  &trans                &mo MEDIA  &kp BKSP  &trans
       >;
-      sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp C_AC_REDO C_AC_UNDO>;
+      sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp C_AC_UNDO C_AC_REDO>;
     };
       
     symbols_layer { // doubles / ? < > ' " (semi/colon to default?)
@@ -164,7 +164,7 @@
         &kp LT    &kp LBKT  &kp LPAR    &kp LBRC  &kp BSLH        &kp FSLH    &kp RBRC  &kp RPAR    &kp RBKT    &kp GT
                                 &trans  &kp LGUI  &kp LSFT        &trans  &mo MEDIA  &trans
       >;
-      sensor-bindings = <&inc_dec_kp C_BRI_UP C_BRI_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
+      sensor-bindings = <&inc_dec_kp C_BRI_UP C_BRI_DN &inc_dec_kp C_VOL_DN C_VOL_UP>;
     };	
 
     number_layer {
