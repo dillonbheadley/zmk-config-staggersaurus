@@ -17,5 +17,5 @@ include:
     shield: staggersaurus_left
   - board: seeeduino_xiao_ble
     shield: staggersaurus_right
-  # - board: seeeduino_xiao_ble
-  # shield: settings_reset
+  - board: seeeduino_xiao_ble
+    shield: settings_reset
