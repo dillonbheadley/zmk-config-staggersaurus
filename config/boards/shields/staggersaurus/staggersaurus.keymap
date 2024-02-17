@@ -123,7 +123,7 @@
         &kp Q        &kp W        &kp E        &kp R        &kp T           &kp Y  &kp U        &kp I        &kp O        &kp QUOT 
         &kp A        &kp S        &kp D        &kp F        &kp G           &kp H  &kp J        &kp K        &kp L        &kp P   
         &kp Z        &kp X        &kp C        &kp V        &kp B           &kp N  &kp M        &kp CMMA     &kp DOT      &kp FSLH
-                          &key_repeat  &ml NAV LGUI  &ml NUMB LSFT           &hlt SYMB ENTER  &kp SPACE  &tog GAME
+                          &key_repeat  &ml NAV LGUI  &ml NUMB LSFT          &hlt SYMB ENTER  &kp SPACE  &tog GAME
       >;
       sensor-bindings = <&inc_dec_kp C_BRI_UP C_BRI_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
     };
@@ -134,7 +134,7 @@
         &kp B  &kp Y  &kp O  &kp U  &kp Z              &kp QUOT  &kp L  &kp D  &kp W  &kp V 
         &kp C  &kp I  &kp E  &kp A  &kp CMMA           &kp DOT  &kp H  &kp T  &kp S  &kp N
         &kp G  &kp X  &kp J  &kp K  &kp FSLH           &kp Q  &kp R  &kp M  &kp F  &kp P
-              &ml NAV LGUI  &ml NUMB LSFT              &mo SYMB  &kp SPC
+              &trans  &ml NAV LGUI  &ml NUMB LSFT      &mo SYMB  &kp SPC  &trans
       >;
     };
 
@@ -143,7 +143,7 @@
         &kp ESC  &kp Q  &kp W  &kp E  &kp R             &kp T  &kp N1  &kp UP  &kp N2  &kp BKSP 
         &kp TAB  &kp A  &kp S  &kp D  &kp F             &kp G  &kp LEFT  &kp DOWN  &kp RIGHT  &kp ENTER
         &kp LSFT  &kp Z  &kp X  &kp C  &kp V            &kp B  &kp N3  &kp N4  &kp N5  &kp N6
-                          &kp SPC  &kp LCTL             &tog GAME  &kp SPC
+                    &trans  &kp SPC  &kp LCTL             &tog GAME  &kp SPC &trans
         >;
     };
 
@@ -152,9 +152,9 @@
         &kp CAPS  &sk RALT  &key_repeat   &caps_word  &sys_reset        &kp PG_UP     &kp LG(LBKT)    &kp UP          &kp LG(RBKT)    &trans 
         &sk LCTL  &sk LALT  &sk LGUI      &sk LSFT    &sk LS(LG(LALT))  &kp PG_DN     &kp LEFT        &kp DOWN        &kp RIGHT       &kp ENTER
         &kp ESC   &kp TAB   &kp ENTER     &kp SPC     &kp BKSP          &trans        &kp LG(LEFT)    &kp LC(MINUS)   &kp LG(RIGHT)   &kp DEL 
-                                          &trans  &trans                &mo MEDIA  &kp BKSP
+                                  &trans  &trans  &trans                &mo MEDIA  &kp BKSP  &trans
       >;
-      sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp K_REDO K_UNDO>;
+      sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp C_AC_REDO C_AC_UNDO>;
     };
       
     symbols_layer { // doubles / ? < > ' " (semi/colon to default?)
@@ -162,7 +162,7 @@
         &kp PRCT  &kp DLLR  &kp HASH    &kp ATSN  &kp STAR        &kp CRRT    &kp DQT   &kp GRAV    &kp QUOT   &kp TILDE
         &kp PIPE  &kp AMPS  &kp QMARK   &kp BANG  &kp PLUS        &kp COLON   &kp MINUS  &kp UNDER   &kp EQUAL   &kp SEMI
         &kp LT    &kp LBKT  &kp LPAR    &kp LBRC  &kp BSLH        &kp FSLH    &kp RBRC  &kp RPAR    &kp RBKT    &kp GT
-                                        &kp LGUI  &kp LSFT        &trans  &mo MEDIA 
+                                &trans  &kp LGUI  &kp LSFT        &trans  &mo MEDIA  &trans
       >;
       sensor-bindings = <&inc_dec_kp C_BRI_UP C_BRI_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
     };	
@@ -172,7 +172,7 @@
         &kp CAPS  &kp RALT  &key_repeat   &caps_word  &kp STAR       &kp MINUS  &kp N1  &kp N2  &kp N3  &kp CMMA
         &kp LCTL  &kp LALT  &kp LGUI      &kp LSFT    &kp PLUS       &kp COLON  &kp N4  &kp N5  &kp N6  &kp ENTER 
         &kp ESC   &kp TAB   &kp ENTER     &kp SPC     &kp BKSP       &kp EQUAL  &kp N7  &kp N8  &kp N9  &kp DOT   
-                                          &mo MEDIA  &trans          &kp N0 &kp BKSP
+                                  &trans  &mo MEDIA  &trans          &kp N0  &kp BKSP  &trans
       >;
       sensor-bindings = <&inc_dec_kp C_BRI_UP C_BRI_DN &inc_dec_kp C_AC_SCROLL_UP C_AC_SCROLL_DOWN>;
     };
@@ -182,7 +182,7 @@
         &kp F1  &kp F2    &kp F3    &kp F4    &bt BT_CLR            &kp C_BRI_UP  &kp C_VOL_DN  &kp C_MUTE  &kp C_VOL_UP  &tog GAME
         &kp F5  &kp F6    &kp F7    &kp F8    &bt BT_PRV            &kp C_BRI_DN  &kp LSFT      &kp LGUI    &kp LALT      &kp LCTL 
         &kp F9  &kp F10   &kp F11   &kp F12   &bootloader           &sys_reset    &kp C_PREV    &kp C_PP    &kp C_NEXT    &tog ALTLAYOUT   
-                                &bt BT_SEL 0 &bt BT_NXT             &trans &trans
+                        &trans  &bt BT_SEL 0 &bt BT_NXT             &trans  &trans  &trans
       >;
     };
 
