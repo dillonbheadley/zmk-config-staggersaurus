@@ -125,7 +125,7 @@
         &kp Z        &kp X        &kp C        &kp V        &kp B           &kp N  &kp M        &kp CMMA     &kp DOT      &kp FSLH
                           &key_repeat  &ml NAV LGUI  &ml NUMB LSFT          &hlt SYMB ENTER  &kp SPACE  &tog GAME
       >;
-      sensor-bindings = <&inc_dec_kp C_BRI_UP C_BRI_DN &inc_dec_kp C_VOL_DN C_VOL_UP>;
+      sensor-bindings = <&inc_dec_kp C_BRI_UP C_BRI_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
     };
 
     // engram
@@ -143,7 +143,7 @@
         &kp ESC  &kp Q  &kp W  &kp E  &kp R             &kp T  &kp N1  &kp UP  &kp N2  &kp BKSP 
         &kp TAB  &kp A  &kp S  &kp D  &kp F             &kp G  &kp LEFT  &kp DOWN  &kp RIGHT  &kp ENTER
         &kp LSFT  &kp Z  &kp X  &kp C  &kp V            &kp B  &kp N3  &kp N4  &kp N5  &kp N6
-                    &trans  &kp SPC  &kp LCTL             &tog GAME  &kp SPC &trans
+                    &trans  &kp SPC  &kp LCTL           &tog GAME  &kp SPC &trans
         >;
     };
 
@@ -154,7 +154,7 @@
         &kp ESC   &kp TAB   &kp ENTER     &kp SPC     &kp BKSP          &trans        &kp LG(LEFT)    &kp LC(MINUS)   &kp LG(RIGHT)   &kp DEL 
                                   &trans  &trans  &trans                &mo MEDIA  &kp BKSP  &trans
       >;
-      sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp C_AC_UNDO C_AC_REDO>;
+      sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp C(Z) S(C(Z))>;
     };
       
     symbols_layer { // doubles / ? < > ' " (semi/colon to default?)
@@ -164,7 +164,7 @@
         &kp LT    &kp LBKT  &kp LPAR    &kp LBRC  &kp BSLH        &kp FSLH    &kp RBRC  &kp RPAR    &kp RBKT    &kp GT
                                 &trans  &kp LGUI  &kp LSFT        &trans  &mo MEDIA  &trans
       >;
-      sensor-bindings = <&inc_dec_kp C_BRI_UP C_BRI_DN &inc_dec_kp C_VOL_DN C_VOL_UP>;
+      sensor-bindings = <&inc_dec_kp C(TAB) S(C(TAB)) &inc_dec_kp C_VOL_UP C_VOL_DN>;
     };	
 
     number_layer {
@@ -174,7 +174,7 @@
         &kp ESC   &kp TAB   &kp ENTER     &kp SPC     &kp BKSP       &kp EQUAL  &kp N7  &kp N8  &kp N9  &kp DOT   
                                   &trans  &mo MEDIA  &trans          &kp N0  &kp BKSP  &trans
       >;
-      sensor-bindings = <&inc_dec_kp C_BRI_UP C_BRI_DN &inc_dec_kp C_AC_SCROLL_UP C_AC_SCROLL_DOWN>;
+      sensor-bindings = <&inc_dec_kp C_BRI_UP C_BRI_DN &inc_dec_kp PG_UP PG_DN>;
     };
 
     media_layer {
