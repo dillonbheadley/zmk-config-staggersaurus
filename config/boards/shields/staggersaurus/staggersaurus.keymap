@@ -154,7 +154,7 @@
         &kp ESC   &kp TAB   &kp ENTER     &kp SPC     &kp BKSP          &trans        &kp LG(LEFT)    &kp LC(MINUS)   &kp LG(RIGHT)   &kp DEL 
                                   &trans  &trans  &trans                &mo MEDIA  &kp BKSP  &trans
       >;
-      sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp LG(TAB) LS(LG(TAB))>;
+      sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp TAB LS(TAB)>;
     };
       
     symbols_layer { // doubles / ? < > ' " (semi/colon to default?)
