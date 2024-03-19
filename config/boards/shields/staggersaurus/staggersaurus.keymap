@@ -164,7 +164,7 @@
         &kp LT    &kp LBKT  &kp LPAR    &kp LBRC  &kp BSLH        &kp FSLH    &kp RBRC  &kp RPAR    &kp RBKT    &kp GT
                                 &trans  &kp LGUI  &kp LSFT        &trans  &mo MEDIA  &trans
       >;
-      sensor-bindings = <&inc_dec_kp LS(LG(Z)) LG(Z) &inc_dec_kp RIGHT LEFT>;
+      sensor-bindings = <&inc_dec_kp LS(LG(Z)) LG(Z) &inc_dec_kp DOWN UP>;
     };	
 
     number_layer {
