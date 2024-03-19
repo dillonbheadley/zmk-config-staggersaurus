@@ -158,7 +158,7 @@
     };
       
     symbols_layer { // doubles / ? < > ' " (semi/colon to default?)
-      bindings = <
+      bindings = <  
         &kp PRCT  &kp DLLR  &kp HASH    &kp ATSN  &kp STAR        &kp CRRT    &kp DQT   &kp GRAV    &kp QUOT   &kp TILDE
         &kp PIPE  &kp AMPS  &kp QMARK   &kp BANG  &kp PLUS        &kp COLON   &kp MINUS  &kp UNDER   &kp EQUAL   &kp SEMI
         &kp LT    &kp LBKT  &kp LPAR    &kp LBRC  &kp BSLH        &kp FSLH    &kp RBRC  &kp RPAR    &kp RBKT    &kp GT
@@ -174,7 +174,7 @@
         &kp ESC   &kp TAB   &kp ENTER     &kp SPC     &kp BKSP       &kp EQUAL  &kp N7  &kp N8  &kp N9  &kp DOT   
                                   &trans  &mo MEDIA  &trans          &kp N0  &kp BKSP  &trans
       >;
-      sensor-bindings = <&inc_dec_kp C_BRI_UP C_BRI_DN &inc_dec_kp PG_DN PG_UP>;
+      sensor-bindings = <&inc_dec_kp RIGHT LEFT &inc_dec_kp PG_DN PG_UP>;
     };
 
     media_layer {
