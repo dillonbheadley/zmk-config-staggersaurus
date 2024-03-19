@@ -154,7 +154,7 @@
         &kp ESC   &kp TAB   &kp ENTER     &kp SPC     &kp BKSP          &sk GLOBE     &kp LG(LEFT)    &kp LC(MINUS)   &kp LG(RIGHT)   &kp DEL 
                                   &trans  &trans  &trans                &mo MEDIA  &kp BKSP  &trans
       >;
-      sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp TAB LS(TAB)>;
+      sensor-bindings = <&inc_dec_kp DOWN UP &inc_dec_kp TAB LS(TAB)>;
     };
       
     symbols_layer { // doubles / ? < > ' " (semi/colon to default?)
@@ -164,7 +164,7 @@
         &kp LT    &kp LBKT  &kp LPAR    &kp LBRC  &kp BSLH        &kp FSLH    &kp RBRC  &kp RPAR    &kp RBKT    &kp GT
                                 &trans  &kp LGUI  &kp LSFT        &trans  &mo MEDIA  &trans
       >;
-      sensor-bindings = <&inc_dec_kp LS(LG(Z)) LG(Z) &inc_dec_kp C_VOL_UP C_VOL_DN>;
+      sensor-bindings = <&inc_dec_kp LS(LG(Z)) LG(Z) &inc_dec_kp RIGHT LEFT>;
     };	
 
     number_layer {
