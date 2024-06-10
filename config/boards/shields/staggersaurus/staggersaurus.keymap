@@ -134,7 +134,7 @@
         &kp B  &kp Y  &kp O  &kp U  &kp Z              &kp QUOT  &kp L  &kp D  &kp W  &kp V 
         &kp C  &kp I  &kp E  &kp A  &kp CMMA           &kp DOT  &kp H  &kp T  &kp S  &kp N
         &kp G  &kp X  &kp J  &kp K  &kp FSLH           &kp Q  &kp R  &kp M  &kp F  &kp P
-          &tog ALT  &ml NAV LGUI  &ml NUMB LSFT        &hlt SYMB ENTER  &kp SPACE  &tog GAME
+          &tog ALT  &ml NAV LGUI  &ml NUMB LSFT        &blt SYMB ENTER  &kp SPACE  &tog GAME
 
       >;
       sensor-bindings = <&inc_dec_kp C_BRI_UP C_BRI_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
