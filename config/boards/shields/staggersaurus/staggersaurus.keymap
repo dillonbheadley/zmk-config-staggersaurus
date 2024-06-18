@@ -43,13 +43,13 @@
       compatible = "zmk,combos";
       combo_esc {
           timeout-ms = <50>;
-          key-positions = <32 33>;
-          bindings = <&kp ESC>;
+          key-positions = <33 34>;
+          bindings = <&kp ENTER>;
       };
       combo_tab {
           timeout-ms = <50>;
-          key-positions = <30 31>;
-          bindings = <&kp TAB>;
+          key-positions = <31 32>;
+          bindings = <&kp ESC>;
       };
   };
   behaviors {
@@ -106,7 +106,7 @@
         &kp Q        &kp W        &kp E        &kp R        &kp T           &kp Y  &kp U        &kp I        &kp O        &kp QUOT 
         &kp A        &kp S        &kp D        &kp F        &kp G           &kp H  &kp J        &kp K        &kp L        &kp P   
         &kp Z        &kp X        &kp C        &kp V        &kp B           &kp N  &kp M        &kp CMMA     &kp DOT      &kp FSLH
-                          &tog ALT  &ml NAV LGUI  &ml NUMB LSFT             &hlt SYMB ENTER  &kp SPACE  &tog GAME
+                          &tog ALT  &ml NAV LGUI  &ml NUMB LSFT             &mo SYMB  &kp SPACE  &tog GAME
       >;
       sensor-bindings = <&inc_dec_kp C_BRI_UP C_BRI_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
     };
@@ -117,7 +117,7 @@
         &kp B  &kp Y  &kp O  &kp U  &kp Z              &kp QUOT  &kp L  &kp D  &kp W  &kp V 
         &kp C  &kp I  &kp E  &kp A  &kp CMMA           &kp DOT  &kp H  &kp T  &kp S  &kp N
         &kp G  &kp X  &kp J  &kp K  &kp FSLH           &kp Q  &kp R  &kp M  &kp F  &kp P
-          &tog ALT  &ml NAV LGUI  &ml NUMB LSFT        &hlt SYMB ENTER  &kp SPACE  &tog GAME
+          &tog ALT  &ml NAV LGUI  &ml NUMB LSFT        &mo SYMB  &kp SPACE  &tog GAME
 
       >;
       sensor-bindings = <&inc_dec_kp C_BRI_UP C_BRI_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
