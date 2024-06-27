@@ -185,7 +185,7 @@
         &tog  MOUSE  &kp RALT  &kp LC(LEFT)  &kp LC(RIGHT)  &kp LC(UP)        &kp PG_UP  &kp LC(LS(LG(LA(SPACE))))  &kp N8  &mkp MCLK  &mkp MB5 
         &kp LCTL  &kp LALT  &kp LGUI  &kp LSFT  &kp SPC                       &kp PG_DN  &kp U  &kp K  &kp O  &tog MOUSE
         &kp ESC  &kp LC(DOWN)  &kp LG(C)  &kp LG(V)  &kp BKSP                 &kp LC(UP)  &trans  &trans  &trans  &mkp MB4 
-                                    &trans  &trans                            &mkp RCLK  &mkp LCLK
+                                  &trans  &trans  &trans                            &mkp RCLK  &mkp LCLK  &trans
       >;
     };
   };
