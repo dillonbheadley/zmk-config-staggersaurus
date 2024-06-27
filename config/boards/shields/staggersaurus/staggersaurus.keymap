@@ -16,7 +16,7 @@
 #define SYMB 4
 #define NUMB 5
 #define MEDIA 6
-// #define MOUSE 7
+#define MOUSE 7
 
 &sk {
   release-after-ms = <500>;
@@ -58,7 +58,7 @@
       label = "HOLD_LAYER_TAP";
       #binding-cells = <2>;
       flavor = "balanced";
-      tapping-term-ms = <125>;
+      tapping-term-ms = <150>;
       bindings = <&mo>, <&kp>;
     };
     ml: mod_layer {
@@ -105,7 +105,7 @@
       bindings = <
         &kp Q        &kp W        &kp E        &kp R        &kp T           &kp Y  &kp U        &kp I        &kp O        &kp QUOT 
         &kp A        &kp S        &kp D        &kp F        &kp G           &kp H  &kp J        &kp K        &kp L        &kp P   
-        &kp Z        &kp X        &kp C        &kp V        &kp B           &kp N  &kp M        &kp CMMA     &kp DOT      &kp FSLH
+        &hlt MOUSE Z  &kp X        &kp C        &kp V        &kp B           &kp N  &kp M        &kp CMMA     &kp DOT      &mt LC(LS(LG(LALT))) FSLH
                           &tog ALT  &ml NAV LGUI  &ml NUMB LSFT             &mo SYMB  &kp SPACE  &tog GAME
       >;
       sensor-bindings = <&inc_dec_kp C_BRI_UP C_BRI_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -134,10 +134,10 @@
 
     nav_layer {
       bindings = <
-        &kp CAPS  &sk RALT  &key_repeat   &caps_word  &sys_reset        &kp PG_UP     &kp LG(LBKT)    &kp UP          &kp LG(RBKT)    &mkp RCLK 
-        &sk LCTL  &sk LALT  &sk LGUI      &sk LSFT    &sk LS(LG(LALT))  &kp PG_DN     &kp LEFT        &kp DOWN        &kp RIGHT       &kp ENTER
-        &kp ESC   &kp TAB   &kp ENTER     &kp SPC     &kp BKSP          &sk GLOBE     &kp LG(LEFT)    &kp LC(MINUS)   &kp LG(RIGHT)   &kp DEL 
-                                  &trans  &trans  &trans                &mo MEDIA  &kp BKSP  &trans
+        &kp CAPS  &sk RALT  &key_repeat   &caps_word  &sys_reset            &kp PG_UP     &kp LG(LBKT)    &kp UP          &kp LG(RBKT)    &mkp RCLK 
+        &sk LCTL  &sk LALT  &sk LGUI      &sk LSFT    &sk LC(LS(LG(LALT)))  &kp PG_DN     &kp LEFT        &kp DOWN        &kp RIGHT       &kp ENTER
+        &kp ESC   &kp TAB   &kp ENTER     &kp SPC     &kp BKSP              &sk GLOBE     &kp LG(LEFT)    &kp LC(MINUS)   &kp LG(RIGHT)   &kp DEL 
+                                  &trans  &trans  &trans                    &mo MEDIA  &kp BKSP  &trans
       >;
       sensor-bindings = <&inc_dec_kp DOWN UP &inc_dec_kp RIGHT LEFT>;
     };
@@ -180,5 +180,13 @@
     //                                 &trans  &trans                            &mkp RCLK  &mkp LCLK
     //   >;
     // };
+    mouse_layer {
+      bindings = <
+        &tog  MOUSE  &kp RALT  &kp LC(LEFT)  &kp LC(RIGHT)  &kp LC(UP)        &kp PG_UP  LC(LS(LG(LA(SPACE))))  &kp N8  &mkp MCLK  &mkp MB5 
+        &kp LCTL  &kp LALT  &kp LGUI  &kp LSFT  &kp SPC                       &kp PG_DN  &kp U  &kp K  &kp O  &tog MOUSE
+        &kp ESC  &kp LC(DOWN)  &kp LG(C)  &kp LG(V)  &kp BKSP                 &kp LC(UP)  &trans  &trans  &trans  &mkp MB4 
+                                    &trans  &trans                            &mkp RCLK  &mkp LCLK
+      >;
+    };
   };
 };
