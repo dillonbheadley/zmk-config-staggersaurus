@@ -7,7 +7,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
-#include <dt-bindings/zmk/mouse.h>
+// #include <dt-bindings/zmk/mouse.h>
 
 #define DEFAULT 0
 #define ALT 1
@@ -134,7 +134,7 @@
 
     nav_layer {
       bindings = <
-        &kp CAPS  &sk RALT  &key_repeat   &caps_word  &sys_reset            &kp PG_UP     &kp LG(LBKT)    &kp UP          &kp LG(RBKT)    &mkp RCLK 
+        &kp CAPS  &sk RALT  &key_repeat   &caps_word  &sys_reset            &kp PG_UP     &kp LG(LBKT)    &kp UP          &kp LG(RBKT)    &tog MOUSE 
         &sk LCTL  &sk LALT  &sk LGUI      &sk LSFT    &sk LC(LS(LG(LALT)))  &kp PG_DN     &kp LEFT        &kp DOWN        &kp RIGHT       &kp ENTER
         &kp ESC   &kp TAB   &kp ENTER     &kp SPC     &kp BKSP              &sk GLOBE     &kp LG(LEFT)    &kp LC(MINUS)   &kp LG(RIGHT)   &kp DEL 
                                   &trans  &trans  &trans                    &mo MEDIA  &kp BKSP  &trans
