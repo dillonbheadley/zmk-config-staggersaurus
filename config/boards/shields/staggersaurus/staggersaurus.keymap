@@ -103,9 +103,9 @@
     compatible = "zmk,keymap";
     default_layer {
       bindings = <
-        &kp Q        &kp W        &kp E        &kp R        &kp T           &kp Y  &kp U        &kp I        &kp O        &kp QUOT 
+        &hlt MOUSE Q &kp W        &kp E        &kp R        &kp T           &kp Y  &kp U        &kp I        &kp O        &kp QUOT 
         &kp A        &kp S        &kp D        &kp F        &kp G           &kp H  &kp J        &kp K        &kp L        &kp P   
-        &hlt MOUSE Z  &kp X        &kp C        &kp V        &kp B           &kp N  &kp M        &kp CMMA     &kp DOT      &kp FSLH
+        &kp Z        &kp X        &kp C        &kp V        &kp B           &kp N  &kp M        &kp CMMA     &kp DOT      &kp FSLH
                           &tog ALT  &ml NAV LGUI  &ml NUMB LSFT             &mo SYMB  &kp SPACE  &tog GAME
       >;
       sensor-bindings = <&inc_dec_kp C_BRI_UP C_BRI_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -182,8 +182,8 @@
     // };
     mouse_layer {
       bindings = <
-        &tog  MOUSE  &kp RALT  &kp LC(LEFT)  &kp LC(RIGHT)  &kp LC(UP)        &kp PG_UP  &kp SPACE  &kp N8  &mkp MCLK  &mkp MB5 
-        &kp LCTL  &kp LALT  &kp LGUI  &kp LSFT  &kp SPC                       &kp PG_DN  &kp U  &kp K  &kp O  &tog MOUSE
+        &tog  MOUSE  &kp RALT  &kp LC(LEFT)  &kp LC(RIGHT)  &kp LC(UP)        &kp PG_UP  &kp LC(LS(LG(LA(SPACE))))  &kp KP_N8  &mkp MCLK  &mkp MB5 
+        &kp LCTL  &kp LALT  &kp LGUI  &kp LSFT  &kp SPC                       &kp PG_DN  &kp KP_N4 &kp KP_N2  &kp KP_N6  &tog MOUSE
         &kp ESC  &kp LC(DOWN)  &kp LG(C)  &kp LG(V)  &kp BKSP                 &kp LC(UP)  &trans  &trans  &trans  &mkp MB4 
                                   &trans  &trans  &trans                            &mkp RCLK  &mkp LCLK  &trans
       >;
