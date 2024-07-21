@@ -13,9 +13,7 @@
 #
 ---
 include:
-  - board: seeeduino_xiao_ble
-    shield: staggersaurus_left
-  - board: seeeduino_xiao_ble
-    shield: staggersaurus_right
-  # - board: seeeduino_xiao_ble
+  - board: nice_nano_v2
+    shield: staggersaurus
+  # - board: nice_nano_v2
   #   shield: settings_reset

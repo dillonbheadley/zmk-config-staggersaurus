@@ -7,6 +7,3 @@ requires: [pro_micro]
 features:
   - keys
   - encoders
-siblings:
-  - staggersaurus_left
-  - staggersaurus_right
