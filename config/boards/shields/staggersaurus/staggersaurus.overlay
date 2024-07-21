@@ -43,25 +43,25 @@ RC(2,0) RC(2,1) RC(2,2) RC(2,3) RC(2,4)  RC(2,5) RC(2,6) RC(2,7) RC(2,8) RC(2,9)
             ;
 
     };
-    encoder1: encoder1 {
+    encoder_left: encoder_left {
         compatible = "alps,ec11";
-        label = "ENCODER1";
+        label = "ENCODER_LEFT";
         a-gpios = <&pro_micro 9 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
         b-gpios = <&pro_micro 8 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
         steps = <80>;
-        status = "okay";
+        status = "disabled";
     };
-    encoder2: encoder2 {
+    encoder_right: encoder_right {
         compatible = "alps,ec11";
-        label = "ENCODER2";
-        a-gpios = <&pro_micro 6 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
-        b-gpios = <&pro_micro 7 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+        label = "ENCODER_RIGHT";
+        a-gpios = <&pro_micro 7 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+        b-gpios = <&pro_micro 6 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
         steps = <80>;
         status = "okay";
     };
     sensors {
         compatible = "zmk,keymap-sensors";
-        sensors = <&encoder1 &encoder2>;
+        sensors = <&encoder_left &encoder_right>;
         triggers-per-rotation = <30>;
     };
 };
