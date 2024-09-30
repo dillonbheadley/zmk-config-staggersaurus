@@ -116,9 +116,9 @@
     nav_layer {
       bindings = <
         &tog GAME  &sk RALT  &key_repeat   &caps_word  &sys_reset           &kp PG_UP     &kp LG(LBKT)    &kp UP          &kp LG(RBKT)    &tog ALT 
-        &sk LCTL  &sk LALT  &sk LGUI      &sk LSFT    &sk LC(LS(LG(LALT)))  &kp PG_DN     &kp LEFT        &kp DOWN        &kp RIGHT       &kp ENTER
+        &sk LCTL  &sk LALT  &sk LGUI      &sk LSFT    &sk LC(LS(LALT))      &kp PG_DN     &kp LEFT        &kp DOWN        &kp RIGHT       &kp ENTER
         &kp ESC   &kp TAB   &kp ENTER     &kp SPC     &kp BKSP              &sk GLOBE     &kp LG(LEFT)    &kp LC(MINUS)   &kp LG(RIGHT)   &kp DEL 
-                                  &trans  &trans  &trans                    &mo MEDIA  &kp BKSP  &trans
+                                  &trans  &trans  &trans                    &sk LC(LS(LG(LALT)))  &kp BKSP  &trans
       >;
       sensor-bindings = <&inc_dec_kp C_BRI_UP C_BRI_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
     };
