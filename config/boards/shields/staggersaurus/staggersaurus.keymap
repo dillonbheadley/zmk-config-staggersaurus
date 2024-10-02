@@ -115,12 +115,12 @@
 
     nav_layer {
       bindings = <
-        &tog GAME  &sk RALT  &key_repeat   &caps_word  &sys_reset           &kp PG_UP     &kp LG(LBKT)    &kp UP          &kp LG(RBKT)    &tog ALT 
+        &tog GAME  &sk RALT  &key_repeat   &caps_word  &trans               &kp PG_UP     &kp LG(LBKT)    &kp UP          &kp LG(RBKT)    &tog ALT 
         &sk LCTL  &sk LALT  &sk LGUI      &sk LSFT    &sk LC(LS(LALT))      &kp PG_DN     &kp LEFT        &kp DOWN        &kp RIGHT       &kp ENTER
         &kp ESC   &kp TAB   &kp ENTER     &kp SPC     &kp BKSP              &sk GLOBE     &kp LG(LEFT)    &kp LC(MINUS)   &kp LG(RIGHT)   &kp DEL 
-                                  &trans  &trans  &trans                    &sk LC(LS(LG(LALT)))  &kp BKSP  &trans
+                                        &trans  &trans  &sys_reset          &sk LC(LS(LG(LALT)))  &kp BKSP  &trans
       >;
-      sensor-bindings = <&inc_dec_kp C_BRI_UP C_BRI_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
+      sensor-bindings = <&inc_dec_kp DOWN UP &inc_dec_kp LS(LG(Z)) LG(Z)>;
     };
   
     number_layer {
@@ -130,17 +130,17 @@
         &bootloader  &kp C_PREV  &kp C_PP     &kp C_NEXT  &kp FSLH          &kp EQUAL  &kp N7  &kp N8  &kp N9  &kp DOT   
                                           &trans  &kp SPC  &trans           &kp N0  &kp BKSP  &trans
       >;
-      sensor-bindings = <&inc_dec_kp DOWN UP &inc_dec_kp PG_DN PG_UP>;
+      sensor-bindings = <&inc_dec_kp C_BRI_UP C_BRI_DN &inc_dec_kp PG_DN PG_UP>;
     };
       
     symbols_layer { // doubles / ? < > ' " (semi/colon to default?)
       bindings = <  
-        &kp PRCT  &kp DLLR  &kp HASH    &kp ATSN  &kp STAR        &kp CRRT    &kp DQT   &kp GRAV    &kp QUOT   &kp TILDE
+        &kp PRCT  &kp DLLR  &kp HASH    &kp ATSN  &kp STAR        &kp CRRT    &kp QUOT   &kp GRAV    &kp DQT   &kp TILDE
         &kp PIPE  &kp AMPS  &kp QMARK   &kp BANG  &kp PLUS        &kp COLON   &kp MINUS  &kp UNDER   &kp EQUAL   &kp SEMI
         &kp LT    &kp LBKT  &kp LPAR    &kp LBRC  &kp BSLH        &kp FSLH    &kp RBRC  &kp RPAR    &kp RBKT    &kp GT
                                 &trans  &kp LGUI  &kp LSFT        &trans  &kp ENTER  &trans
       >;
-      sensor-bindings = <&inc_dec_kp TAB LS(TAB) &inc_dec_kp LS(LG(Z)) LG(Z)>;
+      sensor-bindings = <&inc_dec_kp TAB LS(TAB) &inc_dec_kp C_VOL_UP C_VOL_DN>;
     };	
 
     alt_layer { // engram layout
