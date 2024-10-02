@@ -118,7 +118,7 @@
         &tog GAME  &sk RALT  &key_repeat   &caps_word  &trans               &kp PG_UP     &kp LG(LBKT)    &kp UP          &kp LG(RBKT)    &tog ALT 
         &sk LCTL  &sk LALT  &sk LGUI      &sk LSFT    &sk LC(LS(LALT))      &kp PG_DN     &kp LEFT        &kp DOWN        &kp RIGHT       &kp ENTER
         &kp ESC   &kp TAB   &kp ENTER     &kp SPC     &kp BKSP              &sk GLOBE     &kp LG(LEFT)    &kp LC(MINUS)   &kp LG(RIGHT)   &kp DEL 
-                                        &trans  &trans  &sys_reset          &sk LC(LS(LG(LALT)))  &kp BKSP  &trans
+                                        &trans  &trans  &bootloader         &sk LC(LS(LG(LALT)))  &kp BKSP  &trans
       >;
       sensor-bindings = <&inc_dec_kp DOWN UP &inc_dec_kp LS(LG(Z)) LG(Z)>;
     };
@@ -127,7 +127,7 @@
       bindings = <
         &bt BT_CLR  &bt BT_PRV  &bt BT_SEL 0  &bt BT_NXT  &kp STAR          &kp MINUS  &kp N1  &kp N2  &kp N3  &kp CMMA
         &kp LCTL    &kp LALT    &kp LGUI      &kp LSFT    &kp PLUS          &kp COLON  &kp N4  &kp N5  &kp N6  &kp ENTER 
-        &bootloader  &kp C_PREV  &kp C_PP     &kp C_NEXT  &kp FSLH          &kp EQUAL  &kp N7  &kp N8  &kp N9  &kp DOT   
+        &sys_reset  &kp C_PREV  &kp C_PP     &kp C_NEXT  &kp FSLH          &kp EQUAL  &kp N7  &kp N8  &kp N9  &kp DOT   
                                           &trans  &kp SPC  &trans           &kp N0  &kp BKSP  &trans
       >;
       sensor-bindings = <&inc_dec_kp C_BRI_UP C_BRI_DN &inc_dec_kp PG_DN PG_UP>;
