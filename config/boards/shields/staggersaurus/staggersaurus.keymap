@@ -10,10 +10,10 @@
 #include <dt-bindings/zmk/mouse.h>
 
 #define DEFAULT 0
-#define NAV 1
-#define NUMB 2
-#define SYMB 3
-#define ALT 4
+#define ALT 1
+#define NAV 2
+#define NUMB 3
+#define SYMB 4
 #define GAME 5
 // #define MEDIA 6
 // #define MOUSE 6
@@ -113,6 +113,17 @@
       sensor-bindings = <&inc_dec_kp RIGHT LEFT &inc_dec_kp DOWN UP>;
     };
 
+    alt_layer { // engram layout
+      bindings = <
+        &kp B  &kp Y  &kp O  &kp U  &kp Z              &kp QUOT  &kp L  &kp D  &kp W  &kp V 
+        &kp C  &kp I  &kp E  &kp A  &kp CMMA           &kp DOT  &kp H  &kp T  &kp S  &kp N
+        &kp G  &kp X  &kp J  &kp K  &kp FSLH           &kp Q  &kp R  &kp M  &kp F  &kp P
+            &trans  &ml NAV LGUI  &ml NUMB LSFT        &mo SYMB  &kp SPACE  &trans
+
+      >;
+      sensor-bindings = <&inc_dec_kp RIGHT LEFT &inc_dec_kp DOWN UP>;
+    };
+
     nav_layer {
       bindings = <
         &tog GAME  &sk RALT  &key_repeat   &caps_word  &trans               &kp PG_UP     &kp LG(LBKT)    &kp UP          &kp LG(RBKT)    &tog ALT 
@@ -142,17 +153,6 @@
       >;
       sensor-bindings = <&inc_dec_kp TAB LS(TAB) &inc_dec_kp C_VOL_UP C_VOL_DN>;
     };	
-
-    alt_layer { // engram layout
-      bindings = <
-        &kp B  &kp Y  &kp O  &kp U  &kp Z              &kp QUOT  &kp L  &kp D  &kp W  &kp V 
-        &kp C  &kp I  &kp E  &kp A  &kp CMMA           &kp DOT  &kp H  &kp T  &kp S  &kp N
-        &kp G  &kp X  &kp J  &kp K  &kp FSLH           &kp Q  &kp R  &kp M  &kp F  &kp P
-            &trans  &ml NAV LGUI  &ml NUMB LSFT        &mo SYMB  &kp SPACE  &trans
-
-      >;
-      sensor-bindings = <&inc_dec_kp RIGHT LEFT &inc_dec_kp DOWN UP>;
-    };
 
     game_layer {
       bindings = <
