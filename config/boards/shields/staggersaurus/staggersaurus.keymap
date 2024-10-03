@@ -7,7 +7,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
-#include <dt-bindings/zmk/mouse.h>
+// #include <dt-bindings/zmk/mouse.h>
 
 #define DEFAULT 0
 #define ALT 1
@@ -41,28 +41,28 @@
   // Maybe put these in combos if no encoders
   // &kp C_BRI_UP  &kp C_BRI_DN  &kp C_VOL_DN  &kp C_MUTE  &kp C_VOL_UP 
   // &sys_reset   
-  combos {
-      compatible = "zmk,combos";
-      combo_esc {
-          timeout-ms = <50>;
-          key-positions = <33 34>;
-          bindings = <&kp ENTER>;
-      };
-      combo_tab {
-          timeout-ms = <50>;
-          key-positions = <31 32>;
-          bindings = <&kp ESC>;
-      };
-  };
+  // combos {
+  //     compatible = "zmk,combos";
+  //     combo_esc {
+  //         timeout-ms = <50>;
+  //         key-positions = <33 34>;
+  //         bindings = <&kp ENTER>;
+  //     };
+  //     combo_tab {
+  //         timeout-ms = <50>;
+  //         key-positions = <31 32>;
+  //         bindings = <&kp ESC>;
+  //     };
+  // };
   behaviors {
-    hlt: hold_layer_tap {
-      compatible = "zmk,behavior-hold-tap";
-      label = "HOLD_LAYER_TAP";
-      #binding-cells = <2>;
-      flavor = "balanced";
-      tapping-term-ms = <150>;
-      bindings = <&mo>, <&kp>;
-    };
+    // hlt: hold_layer_tap {
+    //   compatible = "zmk,behavior-hold-tap";
+    //   label = "HOLD_LAYER_TAP";
+    //   #binding-cells = <2>;
+    //   flavor = "balanced";
+    //   tapping-term-ms = <150>;
+    //   bindings = <&mo>, <&kp>;
+    // };
     ml: mod_layer {
       compatible = "zmk,behavior-hold-tap";
       label = "MOD_LAYER";
@@ -108,7 +108,7 @@
         &kp Q        &kp W        &kp E        &kp R        &kp T           &kp Y       &kp U        &kp I        &kp O        &kp QUOT 
         &kp A        &kp S        &kp D        &kp F        &kp G           &kp H       &kp J        &kp K        &kp L        &kp P   
         &kp Z        &kp X        &kp C        &kp V        &kp B           &kp N       &kp M        &kp CMMA     &kp DOT      &kp FSLH
-                              &trans  &ml NAV LGUI  &ml NUMB LSFT           &mo SYMB  &kp SPACE  &trans
+                              &trans  &ml NAV LSFT  &ml NUMB LGUI           &mo SYMB  &kp SPACE  &trans
       >;
       sensor-bindings = <&inc_dec_kp RIGHT LEFT &inc_dec_kp DOWN UP>;
     };
@@ -118,7 +118,7 @@
         &kp B  &kp Y  &kp O  &kp U  &kp Z              &kp QUOT  &kp L  &kp D  &kp W  &kp V 
         &kp C  &kp I  &kp E  &kp A  &kp CMMA           &kp DOT  &kp H  &kp T  &kp S  &kp N
         &kp G  &kp X  &kp J  &kp K  &kp FSLH           &kp Q  &kp R  &kp M  &kp F  &kp P
-            &trans  &ml NAV LGUI  &ml NUMB LSFT        &mo SYMB  &kp SPACE  &trans
+            &trans  &ml NAV LSFT  &ml NUMB LGUI        &mo SYMB  &kp SPACE  &trans
 
       >;
       sensor-bindings = <&inc_dec_kp RIGHT LEFT &inc_dec_kp DOWN UP>;
@@ -149,7 +149,7 @@
         &kp PRCT  &kp DLLR  &kp HASH    &kp ATSN  &kp STAR        &kp CRRT    &kp QUOT   &kp GRAV    &kp DQT   &kp TILDE
         &kp PIPE  &kp AMPS  &kp QMARK   &kp BANG  &kp PLUS        &kp COLON   &kp MINUS  &kp UNDER   &kp EQUAL   &kp SEMI
         &kp LT    &kp LBKT  &kp LPAR    &kp LBRC  &kp BSLH        &kp FSLH    &kp RBRC  &kp RPAR    &kp RBKT    &kp GT
-                                &trans  &kp LGUI  &kp LSFT        &trans  &kp ENTER  &trans
+                                &trans  &kp LSFT  &kp LGUI        &trans  &kp ENTER  &trans
       >;
       sensor-bindings = <&inc_dec_kp TAB LS(TAB) &inc_dec_kp C_VOL_UP C_VOL_DN>;
     };	
