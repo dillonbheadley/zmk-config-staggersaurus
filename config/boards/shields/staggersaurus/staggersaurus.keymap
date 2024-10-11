@@ -7,7 +7,11 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
-// #include <dt-bindings/zmk/mouse.h>
+
+// #define ZMK_POINTING_DEFAULT_MOVE_VAL 1500  // default: 600
+// #define ZMK_POINTING_DEFAULT_SCRL_VAL 20    // default: 10
+#include <dt-bindings/zmk/pointing.h>
+#include <dt-bindings/zmk/mouse.h>
 
 #define DEFAULT 0
 #define ALT 1
@@ -66,20 +70,36 @@
     dotbang: dot_bang {
       compatible = "zmk,behavior-mod-morph";
       #binding-cells = <0>;
-      bindings = <&kp DOT>, <&kp BANG>;
+      bindings = <&kp DOT>, <&mkp RCLK>;
       mods = <(MOD_LSFT|MOD_RSFT)>;
     };
     cmmaqu: comma_question {
       compatible = "zmk,behavior-mod-morph";
       #binding-cells = <0>;
-      bindings = <&kp CMMA>, <&kp QMARK>;
+      bindings = <&kp CMMA>, <&mkp LCLK>;
       mods = <(MOD_LSFT|MOD_RSFT)>;
     };
     slshdash: slash_dash {
+    slshdash: slash_dash {
       compatible = "zmk,behavior-mod-morph";
       #binding-cells = <0>;
-      bindings = <&kp FSLH>, <&kp MINUS>;
+      bindings = <&kp FSLH>, <&mkp MCLK>;
       mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+    mouse_scroll_encoder: mouse_scroll_encoder {
+      compatible = "zmk,behavior-sensor-rotate";
+      #sensor-binding-cells = <0>;
+      bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
+    };
+    mouse_move_x_encoder: mouse_move_x_encoder {
+      compatible = "zmk,behavior-sensor-rotate";
+      #sensor-binding-cells = <0>;
+      bindings = <&mmv MOVE_RIGHT>, <&mmv MOVE_LEFT>;
+    };
+    mouse_move_y_encoder: mouse_move_y_encoder {
+      compatible = "zmk,behavior-sensor-rotate";
+      #sensor-binding-cells = <0>;
+      bindings = <&mmv MOVE_DOWN>, <&mmv MOVE_UP>;
     };
     // dotcol: dot_colon {
     //   compatible = "zmk,behavior-mod-morph";
@@ -107,34 +127,7 @@
     //   tapping-term-ms = <150>;
     //   bindings = <&mo>, <&kp>;
     // };
-    // mouse_l: mouse_left {
-    //   compatible = "zmk,behavior-mod-morph";
-    //   label = "MOUSE_LEFT";
-    //   #binding-cells = <0>;
-    //   bindings = <&mmv MOVE_HOR(-5000)>, <&mmv MOVE_HOR(-2000)>;
-    //   mods = <(MOD_LSFT|MOD_RSFT)>;
-    // };
-    // mouse_r: mouse_right {
-    //   compatible = "zmk,behavior-mod-morph";
-    //   label = "MOUSE_RIGHT";
-    //   #binding-cells = <0>;
-    //   bindings = <&mmv MOVE_HOR(5000)>, <&mmv MOVE_HOR(2000)>;
-    //   mods = <(MOD_LSFT|MOD_RSFT)>;
-    // };
-    // mouse_u: mouse_up {
-    //   compatible = "zmk,behavior-mod-morph";
-    //   label = "MOUSE_UP";
-    //   #binding-cells = <0>;
-    //   bindings = <&mmv MOVE_VERT(-5000)>, <&mmv MOVE_VERT(-2000)>;
-    //   mods = <(MOD_LSFT|MOD_RSFT)>;
-    // };
-    // mouse_d: mouse_down {
-    //   compatible = "zmk,behavior-mod-morph";
-    //   label = "MOUSE_DOWN";
-    //   #binding-cells = <0>;
-    //   bindings = <&mmv MOVE_VERT(5000)>, <&mmv MOVE_VERT(2000)>;
-    //   mods = <(MOD_LSFT|MOD_RSFT)>;
-    // };
+
   };
 
   keymap {
@@ -146,7 +139,7 @@
         &kp Z        &kp X        &kp C        &kp V        &kp B           &kp N       &kp M        &cmmaqu      &dotbang     &slshdash
                               &trans  &ml NAV LSFT  &ml NUMB LGUI           &mo SYMB  &kp SPACE  &trans
       >;
-      sensor-bindings = <&inc_dec_kp RIGHT LEFT &inc_dec_kp DOWN UP>;
+      sensor-bindings = <&mouse_move_x_encoder &mouse_move_y_encoder>;
     };
 
     alt_layer { // northstar layout
@@ -157,7 +150,7 @@
             &trans  &ml NAV LSFT  &ml NUMB LGUI        &mo SYMB  &kp SPACE  &trans
 
       >;
-      sensor-bindings = <&inc_dec_kp RIGHT LEFT &inc_dec_kp DOWN UP>;
+      sensor-bindings = <&mouse_move_x_encoder &mouse_move_y_encoder>;
     };
 
     nav_layer {
@@ -177,7 +170,7 @@
         &sys_reset  &kp C_VOL_DN  &kp C_MUTE  &kp C_VOL_UP  &kp FSLH        &kp EQUAL  &kp N7  &kp N8  &kp N9  &kp DOT   
                                           &trans  &kp SPC  &trans           &kp N0  &kp BKSP  &trans
       >;
-      sensor-bindings = <&inc_dec_kp C_BRI_UP C_BRI_DN &inc_dec_kp PG_DN PG_UP>;
+      sensor-bindings = <&inc_dec_kp C_BRI_UP C_BRI_DN &mouse_scroll_encoder>;
     };
       
     symbols_layer { 
@@ -219,22 +212,11 @@
     //   >;
     // };
 
-    // alt_layer { // engram layout
-    //   bindings = <
-    //     &kp B  &kp Y  &kp O  &kp U  &kp Z              &kp QUOT  &kp L  &kp D  &kp W  &kp V 
-    //     &kp C  &kp I  &kp E  &kp A  &kp CMMA           &kp DOT  &kp H  &kp T  &kp S  &kp N
-    //     &kp G  &kp X  &kp J  &kp K  &kp FSLH           &kp Q  &kp R  &kp M  &kp F  &kp P
-    //         &trans  &ml NAV LSFT  &ml NUMB LGUI        &mo SYMB  &kp SPACE  &trans
-
-    //   >;
-    //   sensor-bindings = <&inc_dec_kp RIGHT LEFT &inc_dec_kp DOWN UP>;
-    // };
-
-    // alt_layer { // graphite layout
-    //   bindings = <
-    //     &kp B  &kp L  &kp D  &kp W  &kp Z              &kp QUOT  &kp F  &kp O  &kp U  &kp J 
-    //     &kp N  &kp R  &kp T  &kp S  &kp G              &kp Y  &kp H  &kp A  &kp E  &kp I
-    //     &kp Q  &kp X  &kp M  &kp C  &kp V              &kp K  &kp P  &dotbang  &cmmaqu  &kp SEMI
+    // alt_layer { // engram flipped layout
+    //   bindings = <    
+    //     &kp V  &kp W  &kp D  &kp L  &kp Z              &kp QUOT  &kp U  &kp O  &kp Y  &kp B 
+    //     &kp N  &kp S  &kp T  &kp H  &kp CMMA           &kp DOT  &kp A  &kp E  &kp I  &kp C
+    //     &kp P  &kp F  &kp M  &kp R  &kp Q              &kp FSLH  &kp K  &kp J  &kp X  &kp G
     //         &trans  &ml NAV LSFT  &ml NUMB LGUI        &mo SYMB  &kp SPACE  &trans
 
     //   >;
