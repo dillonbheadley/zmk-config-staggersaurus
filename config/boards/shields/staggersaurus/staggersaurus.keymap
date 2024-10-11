@@ -63,22 +63,10 @@
       tapping-term-ms = <150>;
       bindings = <&mo>, <&sk>;
     };
-    dotcol: dot_colon {
-      compatible = "zmk,behavior-mod-morph";
-      #binding-cells = <0>;
-      bindings = <&kp DOT>, <&kp COLON>;
-      mods = <(MOD_LSFT|MOD_RSFT)>;
-    };
     dotbang: dot_bang {
       compatible = "zmk,behavior-mod-morph";
       #binding-cells = <0>;
       bindings = <&kp DOT>, <&kp BANG>;
-      mods = <(MOD_LSFT|MOD_RSFT)>;
-    };
-    cmmasemi: comma_semicolon {
-      compatible = "zmk,behavior-mod-morph";
-      #binding-cells = <0>;
-      bindings = <&kp CMMA>, <&kp SEMI>;
       mods = <(MOD_LSFT|MOD_RSFT)>;
     };
     cmmaqu: comma_question {
@@ -87,12 +75,30 @@
       bindings = <&kp CMMA>, <&kp QMARK>;
       mods = <(MOD_LSFT|MOD_RSFT)>;
     };
-    qubang: question_bang {
+    slshdash: slash_dash {
       compatible = "zmk,behavior-mod-morph";
       #binding-cells = <0>;
-      bindings = <&kp QMARK>, <&kp BANG>;
+      bindings = <&kp FSLH>, <&kp MINUS>;
       mods = <(MOD_LSFT|MOD_RSFT)>;
     };
+    // dotcol: dot_colon {
+    //   compatible = "zmk,behavior-mod-morph";
+    //   #binding-cells = <0>;
+    //   bindings = <&kp DOT>, <&kp COLON>;
+    //   mods = <(MOD_LSFT|MOD_RSFT)>;
+    // };
+    // cmmasemi: comma_semicolon {
+    //   compatible = "zmk,behavior-mod-morph";
+    //   #binding-cells = <0>;
+    //   bindings = <&kp CMMA>, <&kp SEMI>;
+    //   mods = <(MOD_LSFT|MOD_RSFT)>;
+    // };
+    // qubang: question_bang {
+    //   compatible = "zmk,behavior-mod-morph";
+    //   #binding-cells = <0>;
+    //   bindings = <&kp QMARK>, <&kp BANG>;
+    //   mods = <(MOD_LSFT|MOD_RSFT)>;
+    // };
     // hlt: hold_layer_tap {
     //   compatible = "zmk,behavior-hold-tap";
     //   label = "HOLD_LAYER_TAP";
@@ -137,33 +143,22 @@
       bindings = <
         &kp Q        &kp W        &kp E        &kp R        &kp T           &kp Y       &kp U        &kp I        &kp O        &kp QUOT 
         &kp A        &kp S        &kp D        &kp F        &kp G           &kp H       &kp J        &kp K        &kp L        &kp P   
-        &kp Z        &kp X        &kp C        &kp V        &kp B           &kp N       &kp M        &cmmaqu      &dotbang     &kp FSLH
+        &kp Z        &kp X        &kp C        &kp V        &kp B           &kp N       &kp M        &cmmaqu      &dotbang     &slshdash
                               &trans  &ml NAV LSFT  &ml NUMB LGUI           &mo SYMB  &kp SPACE  &trans
       >;
       sensor-bindings = <&inc_dec_kp RIGHT LEFT &inc_dec_kp DOWN UP>;
     };
 
-    alt_layer { // graphite layout
+    alt_layer { // northstar layout
       bindings = <
-        &kp B  &kp L  &kp D  &kp W  &kp Z              &kp QUOT  &kp F  &kp O  &kp U  &kp J 
-        &kp N  &kp R  &kp T  &kp S  &kp G              &kp Y  &kp H  &kp A  &kp E  &kp I
-        &kp Q  &kp X  &kp M  &kp C  &kp V              &kp K  &kp P  &dotbang  &cmmaqu  &kp SEMI
+        &kp Q  &kp W  &kp M  &kp B  &kp Z              &kp J  &kp F  &kp O  &kp U  &kp QUOT
+        &kp N  &kp R  &kp S  &kp T  &kp G              &kp Y  &kp H  &kp E  &kp I  &kp A
+        &kp X  &kp L  &kp C  &kp D  &kp V              &kp K  &kp P  &cmmaqu  &dotbang  &slshdash
             &trans  &ml NAV LSFT  &ml NUMB LGUI        &mo SYMB  &kp SPACE  &trans
 
       >;
       sensor-bindings = <&inc_dec_kp RIGHT LEFT &inc_dec_kp DOWN UP>;
     };
-
-    // alt_layer { // engram layout
-    //   bindings = <
-    //     &kp B  &kp Y  &kp O  &kp U  &kp Z              &kp QUOT  &kp L  &kp D  &kp W  &kp V 
-    //     &kp C  &kp I  &kp E  &kp A  &kp CMMA           &kp DOT  &kp H  &kp T  &kp S  &kp N
-    //     &kp G  &kp X  &kp J  &kp K  &kp FSLH           &kp Q  &kp R  &kp M  &kp F  &kp P
-    //         &trans  &ml NAV LSFT  &ml NUMB LGUI        &mo SYMB  &kp SPACE  &trans
-
-    //   >;
-    //   sensor-bindings = <&inc_dec_kp RIGHT LEFT &inc_dec_kp DOWN UP>;
-    // };
 
     nav_layer {
       bindings = <
@@ -222,6 +217,28 @@
     //     &kp ESC  &kp LC(DOWN)  &kp LG(C)  &kp LG(V)  &kp BKSP                 &kp LC(UP)  &mwh SCROLL_VERT(40)  &mwh SCROLL_HOR(40)  &mwh SCROLL_HOR(-40)  &mkp MB4 
     //                                 &trans  &trans                            &mkp RCLK  &mkp LCLK
     //   >;
+    // };
+
+    // alt_layer { // engram layout
+    //   bindings = <
+    //     &kp B  &kp Y  &kp O  &kp U  &kp Z              &kp QUOT  &kp L  &kp D  &kp W  &kp V 
+    //     &kp C  &kp I  &kp E  &kp A  &kp CMMA           &kp DOT  &kp H  &kp T  &kp S  &kp N
+    //     &kp G  &kp X  &kp J  &kp K  &kp FSLH           &kp Q  &kp R  &kp M  &kp F  &kp P
+    //         &trans  &ml NAV LSFT  &ml NUMB LGUI        &mo SYMB  &kp SPACE  &trans
+
+    //   >;
+    //   sensor-bindings = <&inc_dec_kp RIGHT LEFT &inc_dec_kp DOWN UP>;
+    // };
+
+    // alt_layer { // graphite layout
+    //   bindings = <
+    //     &kp B  &kp L  &kp D  &kp W  &kp Z              &kp QUOT  &kp F  &kp O  &kp U  &kp J 
+    //     &kp N  &kp R  &kp T  &kp S  &kp G              &kp Y  &kp H  &kp A  &kp E  &kp I
+    //     &kp Q  &kp X  &kp M  &kp C  &kp V              &kp K  &kp P  &dotbang  &cmmaqu  &kp SEMI
+    //         &trans  &ml NAV LSFT  &ml NUMB LGUI        &mo SYMB  &kp SPACE  &trans
+
+    //   >;
+    //   sensor-bindings = <&inc_dec_kp RIGHT LEFT &inc_dec_kp DOWN UP>;
     // };
   };
 };
