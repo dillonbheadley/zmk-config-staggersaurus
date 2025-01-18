@@ -80,7 +80,6 @@
       mods = <(MOD_LSFT|MOD_RSFT)>;
     };
     slshdash: slash_dash {
-    slshdash: slash_dash {
       compatible = "zmk,behavior-mod-morph";
       #binding-cells = <0>;
       bindings = <&kp FSLH>, <&mkp MCLK>;
