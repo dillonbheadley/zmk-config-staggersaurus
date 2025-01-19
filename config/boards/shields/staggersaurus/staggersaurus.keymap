@@ -29,6 +29,13 @@
   release-after-ms = <500>;
 };
 
+&mmv {
+    x-input-code = <INPUT_REL_X>;
+    trigger-period-ms = <0>
+    time-to-max-speed-ms = <10>;
+    acceleration-exponent = <1>;
+};
+
 / { 
   // Maybe put these in combos if no encoders
   // &kp C_BRI_UP  &kp C_BRI_DN  &kp C_VOL_DN  &kp C_MUTE  &kp C_VOL_UP 
