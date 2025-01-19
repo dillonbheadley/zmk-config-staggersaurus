@@ -33,7 +33,7 @@
     x-input-code = <INPUT_REL_X>;
     trigger-period-ms = <0>;
     time-to-max-speed-ms = <10>;
-    acceleration-exponent = <1>;
+    acceleration-exponent = <0>;
 };
 
 / { 
