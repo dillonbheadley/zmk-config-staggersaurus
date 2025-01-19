@@ -69,13 +69,13 @@
       compatible = "zmk,behavior-sensor-rotate";
       #sensor-binding-cells = <0>;
       tap-ms = <80>;
-      bindings = <&mmv MOVE_X(200)>, <&mmv MOVE_X(-200)>;
+      bindings = <&mmv MOVE_X(800)>, <&mmv MOVE_X(-800)>;
     };
     mouse_move_y_encoder: mouse_move_y_encoder {
       compatible = "zmk,behavior-sensor-rotate";
       #sensor-binding-cells = <0>;
       tap-ms = <80>;
-      bindings = <&mmv MOVE_Y(200)>, <&mmv MOVE_Y(-200)>;
+      bindings = <&mmv MOVE_Y(800)>, <&mmv MOVE_Y(-800)>;
     };
   };
 
