@@ -18,7 +18,7 @@
 #define NUMB 3
 #define SYMB 4
 #define GAME 5
-// #define MEDIA 6
+#define FUNC 6
 
 &sk {
   release-after-ms = <500>;
@@ -47,22 +47,16 @@
       tapping-term-ms = <150>;
       bindings = <&mo>, <&sk>;
     };
-    cmmaqu: comma_question {
+    cmadash: comma_dash {
       compatible = "zmk,behavior-mod-morph";
       #binding-cells = <0>;
-      bindings = <&kp CMMA>, <&kp C_PREV>;
+      bindings = <&kp CMMA>, <&kp MINUS>;
       mods = <(MOD_LSFT|MOD_RSFT)>;
     };
     dotbang: dot_bang {
       compatible = "zmk,behavior-mod-morph";
       #binding-cells = <0>;
-      bindings = <&kp DOT>, <&kp C_PP>;
-      mods = <(MOD_LSFT|MOD_RSFT)>;
-    };
-    slshdash: slash_dash {
-      compatible = "zmk,behavior-mod-morph";
-      #binding-cells = <0>;
-      bindings = <&kp FSLH>, <&kp C_NEXT>;
+      bindings = <&kp DOT>, <&kp BANG>;
       mods = <(MOD_LSFT|MOD_RSFT)>;
     };
     mouse_scroll_encoder: mouse_scroll_encoder {
@@ -91,7 +85,7 @@
       bindings = <
         &kp Q        &kp W        &kp E        &kp R        &kp T           &kp Y       &kp U        &kp I        &kp O        &kp QUOT 
         &kp A        &kp S        &kp D        &kp F        &kp G           &kp H       &kp J        &kp K        &kp L        &kp P   
-        &kp Z        &kp X        &kp C        &kp V        &kp B           &kp N       &kp M        &cmmaqu      &dotbang     &slshdash
+        &kp Z        &kp X        &kp C        &kp V        &kp B           &kp N       &kp M        &cmadash     &dotbang     &kp FSLH
                               &trans  &ml NAV LSFT  &ml NUMB LGUI           &mo SYMB  &kp SPACE  &trans
       >;
       sensor-bindings = <&mouse_move_x_encoder &mouse_move_y_encoder>;
@@ -105,7 +99,7 @@
       bindings = <
         &kp Q  &kp W  &kp M  &kp B  &kp Z              &kp J  &kp F  &kp O  &kp U  &kp QUOT
         &kp N  &kp R  &kp S  &kp T  &kp G              &kp Y  &kp H  &kp E  &kp I  &kp A
-        &kp X  &kp L  &kp C  &kp D  &kp V              &kp K  &kp P  &cmmaqu  &dotbang  &slshdash
+        &kp X  &kp L  &kp C  &kp D  &kp V              &kp K  &kp P  &cmadash  &dotbang  &kp FSLH
             &trans  &ml NAV LSFT  &ml NUMB LGUI        &mo SYMB  &kp SPACE  &trans
 
       >;
@@ -117,17 +111,17 @@
         &tog GAME  &sk RALT  &key_repeat  &caps_word  &sk GLOBE             &kp PG_UP     &kp LG(LBKT)    &kp UP          &kp LG(RBKT)    &tog ALT 
         &sk LCTL  &sk LALT  &sk LGUI      &sk LSFT    &sk LC(LS(LALT))      &kp PG_DN     &kp LEFT        &kp DOWN        &kp RIGHT       &kp ENTER
         &kp ESC   &kp TAB   &kp ENTER     &kp SPC     &kp BKSP              &kp LC(MINUS) &mkp LCLK       &mkp RCLK       &mkp MCLK       &kp DEL 
-                                        &trans  &trans  &bootloader         &sk LC(LS(LG(LALT)))  &kp BKSP  &trans
+                                        &trans  &trans  &mo FUNC           &sk LC(LS(LG(LALT)))  &kp BKSP  &trans
       >;
       sensor-bindings = <&inc_dec_kp DOWN UP &inc_dec_kp LS(LG(Z)) LG(Z)>;
     };
   
     number_layer {
       bindings = <
-        &bt BT_CLR  &bt BT_PRV  &bt BT_SEL 0  &bt BT_NXT  &kp STAR          &kp MINUS  &kp N1  &kp N2  &kp N3  &kp CMMA
-        &kp LCTL    &kp LALT    &kp LGUI      &kp LSFT    &kp PLUS          &kp COLON  &kp N4  &kp N5  &kp N6  &kp ENTER 
-        &sys_reset  &kp C_VOL_DN  &kp C_MUTE  &kp C_VOL_UP  &kp FSLH        &kp EQUAL  &kp N7  &kp N8  &kp N9  &kp DOT   
-                                          &trans  &kp SPC  &trans           &kp N0  &kp BKSP  &trans
+        &kp C_BRI_UP  &kp C_PREV  &kp C_PP      &kp C_NEXT  &kp STAR          &kp MINUS  &kp N1  &kp N2  &kp N3  &kp CMMA
+        &kp LCTL      &kp LALT    &kp LGUI      &kp LSFT    &kp PLUS          &kp COLON  &kp N4  &kp N5  &kp N6  &kp ENTER 
+        &kp C_BRI_DN  &kp C_VOL_DN  &kp C_MUTE  &kp C_VOL_UP  &kp FSLH        &kp EQUAL  &kp N7  &kp N8  &kp N9  &kp DOT   
+                                          &trans  &bootloader  &trans           &kp N0  &kp BKSP  &trans
       >;
       sensor-bindings = <&inc_dec_kp C_BRI_UP C_BRI_DN &mouse_scroll_encoder>;
     };
@@ -152,15 +146,15 @@
         >;
     };
 
-    // media_layer {
-    //   bindings = <
-    //     &kp F1  &kp F2    &kp F3    &kp F4    &bt BT_CLR            &kp C_BRI_UP  &kp C_VOL_DN  &kp C_MUTE  &kp C_VOL_UP  &tog GAME
-    //     &kp F5  &kp F6    &kp F7    &kp F8    &bt BT_PRV            &kp C_BRI_DN  &kp LSFT      &kp LGUI    &kp LALT      &kp LCTL 
-    //     &kp F9  &kp F10   &kp F11   &kp F12   &bootloader           &sys_reset    &kp C_PREV    &kp C_PP    &kp C_NEXT    &tog ALT   
-    //                     &trans  &bt BT_SEL 0 &bt BT_NXT             &kp ENTER  &trans  &trans
-    //   >;
-    //   sensor-bindings = <&inc_dec_kp C_BRI_UP C_BRI_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
-    // };
+    function_layer {
+      bindings = <
+        &kp F1  &kp F2    &kp F3    &kp F4    &bt BT_SEL 0         &kp C_BRI_UP  &kp C_VOL_DN  &kp C_MUTE  &kp C_VOL_UP  &tog GAME
+        &kp F5  &kp F6    &kp F7    &kp F8    &bt BT_NXT           &kp C_BRI_DN  &kp LSFT      &kp LGUI    &kp LALT      &kp LCTL 
+        &kp F9  &kp F10   &kp F11   &kp F12   &bt BT_PRV           &sys_reset    &kp C_PREV    &kp C_PP    &kp C_NEXT    &tog ALT   
+                                &trans  &bt BT_CLR  &trans         &kp ENTER  &trans  &trans
+      >;
+      sensor-bindings = <&inc_dec_kp C_BRI_UP C_BRI_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
+    };
 
   };
 };
