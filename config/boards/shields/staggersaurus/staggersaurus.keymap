@@ -127,12 +127,12 @@
     };
       
     symbols_layer { 
-      // doubles ! ? ; : ' "
+      // doubles ! ? - ' "
       bindings = <  
         &kp PRCT  &kp DLLR  &kp HASH    &kp ATSN  &kp STAR        &kp CRRT    &kp QUOT   &kp GRAV    &kp DQT   &kp TILDE
         &kp PIPE  &kp AMPS  &kp QMARK   &kp BANG  &kp PLUS        &kp COLON   &kp MINUS  &kp UNDER   &kp EQUAL   &kp SEMI
         &kp LT    &kp LBKT  &kp LPAR    &kp LBRC  &kp BSLH        &kp FSLH    &kp RBRC  &kp RPAR    &kp RBKT    &kp GT
-                                &trans  &kp LSFT  &kp LGUI        &trans  &kp ENTER  &trans
+                                &trans  &kp LSFT  &kp LGUI        &trans  &sk LGUI  &trans
       >;
       sensor-bindings = <&inc_dec_kp TAB LS(TAB) &inc_dec_kp C_VOL_UP C_VOL_DN>;
     };	
