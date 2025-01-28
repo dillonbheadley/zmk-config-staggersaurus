@@ -143,7 +143,7 @@
         &tog GAME  &sk RALT  &key_repeat  &caps_word  &sk GLOBE             &kp PG_UP     &kp LG(LBKT)    &kp UP          &kp LG(RBKT)    &tog ALT 
         &sk LCTL  &sk LALT  &sk LGUI      &sk LSFT    &sk LC(LS(LALT))      &kp PG_DN     &kp LEFT        &kp DOWN        &kp RIGHT       &kp ENTER
         &kp ESC   &kp TAB   &kp ENTER     &kp SPC     &kp BKSP              &kp LC(MINUS) &mkp LCLK       &mkp RCLK       &mkp MCLK       &kp DEL 
-                                        &trans  &none  &bootloader               &sk LC(LS(LG(LALT)))  &kp BKSP  &trans
+                                        &trans  &trans  &none               &trans  &kp BKSP  &trans
       >;
       sensor-bindings = <&inc_dec_kp DOWN UP &inc_dec_kp LS(LG(Z)) LG(Z)>;
     };
