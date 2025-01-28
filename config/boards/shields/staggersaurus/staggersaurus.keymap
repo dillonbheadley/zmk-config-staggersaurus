@@ -59,28 +59,6 @@
       bindings = <&kp DOT>, <&kp BANG>;
       mods = <(MOD_LSFT|MOD_RSFT)>;
     };
-    // numbers?
-    // &kp QUOT   &kp GRAV    &kp DQT
-    // &kp RBRC  &kp RPAR    &kp RBKT
-    // &kp MINUS  &kp UNDER   &kp EQUAL
-    sh1: sh1 {
-      compatible = "zmk,behavior-mod-morph";
-      #binding-cells = <0>;
-      bindings = <&kp QUOT>, <&kp N1>;
-      mods = <(MOD_LSFT)>;
-    };
-    sh2: sh2 {
-      compatible = "zmk,behavior-mod-morph";
-      #binding-cells = <0>;
-      bindings = <&kp GRAV>, <&kp N2>;
-      mods = <(MOD_LSFT)>;
-    };
-    sh3: sh3 {
-      compatible = "zmk,behavior-mod-morph";
-      #binding-cells = <0>;
-      bindings = <&kp DQT>, <&kp N3>;
-      mods = <(MOD_LSFT)>;
-    };
     mouse_scroll_encoder: mouse_scroll_encoder {
       compatible = "zmk,behavior-sensor-rotate";
       #sensor-binding-cells = <0>;
@@ -145,9 +123,9 @@
         &kp ESC   &kp TAB   &kp ENTER     &kp SPC     &kp BKSP              &kp LC(MINUS) &mkp LCLK       &mkp RCLK       &mkp MCLK       &kp DEL 
                                         &trans  &trans  &none               &trans  &kp BKSP  &trans
       >;
-      sensor-bindings = <&inc_dec_kp DOWN UP &inc_dec_kp LS(LG(Z)) LG(Z)>;
+      sensor-bindings = <&inc_dec_kp C_BRI_UP C_BRI_DN &inc_dec_kp LS(LG(Z)) LG(Z)>;
     };
-  
+
     // number_layer {
     //   bindings = <
     //     &kp C_BRI_UP  &kp C_PREV  &kp C_PP      &kp C_NEXT  &kp STAR          &kp MINUS  &kp N1  &kp N2  &kp N3  &kp CMMA
