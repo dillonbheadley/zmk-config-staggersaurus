@@ -103,7 +103,7 @@
     conditional_layers {
       compatible = "zmk,conditional-layers";
       tri_layer {
-        if-layers = <NUMB SYMB>;
+        if-layers = <NAV SYMB>;
         then-layer = <FUNC>;
       };
     };
