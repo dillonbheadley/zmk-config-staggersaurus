@@ -59,6 +59,28 @@
       bindings = <&kp DOT>, <&kp BANG>;
       mods = <(MOD_LSFT|MOD_RSFT)>;
     };
+    // numbers?
+    // &kp QUOT   &kp GRAV    &kp DQT
+    // &kp RBRC  &kp RPAR    &kp RBKT
+    // &kp MINUS  &kp UNDER   &kp EQUAL
+    sh1: sh1 {
+      compatible = "zmk,behavior-mod-morph";
+      #binding-cells = <0>;
+      bindings = <&kp QUOT>, <&kp N1>;
+      mods = <(MOD_LSFT)>;
+    };
+    sh2: sh2 {
+      compatible = "zmk,behavior-mod-morph";
+      #binding-cells = <0>;
+      bindings = <&kp GRAV>, <&kp N2>;
+      mods = <(MOD_LSFT)>;
+    };
+    sh3: sh3 {
+      compatible = "zmk,behavior-mod-morph";
+      #binding-cells = <0>;
+      bindings = <&kp DQT>, <&kp N3>;
+      mods = <(MOD_LSFT)>;
+    };
     mouse_scroll_encoder: mouse_scroll_encoder {
       compatible = "zmk,behavior-sensor-rotate";
       #sensor-binding-cells = <0>;
@@ -77,6 +99,15 @@
       tap-ms = <40>;
       bindings = <&mmv MOVE_DOWN>, <&mmv MOVE_UP>;
     };
+
+    conditional_layers {
+      compatible = "zmk,conditional-layers";
+      tri_layer {
+        if-layers = <NUMB SYMB>;
+        then-layer = <FUNC>;
+      };
+    };
+
   };
 
   keymap {
@@ -111,7 +142,7 @@
         &tog GAME  &sk RALT  &key_repeat  &caps_word  &sk GLOBE             &kp PG_UP     &kp LG(LBKT)    &kp UP          &kp LG(RBKT)    &tog ALT 
         &sk LCTL  &sk LALT  &sk LGUI      &sk LSFT    &sk LC(LS(LALT))      &kp PG_DN     &kp LEFT        &kp DOWN        &kp RIGHT       &kp ENTER
         &kp ESC   &kp TAB   &kp ENTER     &kp SPC     &kp BKSP              &kp LC(MINUS) &mkp LCLK       &mkp RCLK       &mkp MCLK       &kp DEL 
-                                        &trans  &trans  &mo FUNC           &sk LC(LS(LG(LALT)))  &kp BKSP  &trans
+                                        &trans  &none  &bootloader               &sk LC(LS(LG(LALT)))  &kp BKSP  &trans
       >;
       sensor-bindings = <&inc_dec_kp DOWN UP &inc_dec_kp LS(LG(Z)) LG(Z)>;
     };
@@ -119,9 +150,9 @@
     number_layer {
       bindings = <
         &kp C_BRI_UP  &kp C_PREV  &kp C_PP      &kp C_NEXT  &kp STAR          &kp MINUS  &kp N1  &kp N2  &kp N3  &kp CMMA
-        &kp LCTL      &kp LALT    &kp LGUI      &kp LSFT    &kp PLUS          &kp COLON  &kp N4  &kp N5  &kp N6  &kp ENTER 
+        &kp LCTL      &kp LALT    &kp LGUI      &kp LSFT    &kp PLUS          &kp COLON  &kp N4  &kp N5  &kp N6  &kp N0 
         &kp C_BRI_DN  &kp C_VOL_DN  &kp C_MUTE  &kp C_VOL_UP  &kp FSLH        &kp EQUAL  &kp N7  &kp N8  &kp N9  &kp DOT   
-                                          &trans  &bootloader  &trans           &kp N0  &kp BKSP  &trans
+                                            &trans  &trans  &none             &trans  &kp BKSP  &trans
       >;
       sensor-bindings = <&inc_dec_kp C_BRI_UP C_BRI_DN &mouse_scroll_encoder>;
     };
@@ -129,10 +160,10 @@
     symbols_layer { 
       // doubles ! ? - ' "
       bindings = <  
-        &kp PRCT  &kp DLLR  &kp HASH    &kp ATSN  &kp STAR        &kp CRRT    &kp QUOT   &kp GRAV    &kp DQT   &kp TILDE
+        &kp PRCT  &kp DLLR  &kp HASH    &kp ATSN  &kp STAR        &kp CRRT    &sh1   &sh2    &sh3   &kp TILDE
         &kp PIPE  &kp AMPS  &kp QMARK   &kp BANG  &kp PLUS        &kp COLON   &kp MINUS  &kp UNDER   &kp EQUAL   &kp SEMI
         &kp LT    &kp LBKT  &kp LPAR    &kp LBRC  &kp BSLH        &kp FSLH    &kp RBRC  &kp RPAR    &kp RBKT    &kp GT
-                                &trans  &kp LSFT  &kp LGUI        &trans  &sk LGUI  &trans
+                                &trans  &kp LSFT  &trans          &none  &sk LGUI  &trans
       >;
       sensor-bindings = <&inc_dec_kp TAB LS(TAB) &inc_dec_kp C_VOL_UP C_VOL_DN>;
     };	
@@ -151,7 +182,7 @@
         &kp F1  &kp F2    &kp F3    &kp F4    &bt BT_SEL 0         &kp C_BRI_UP  &kp C_VOL_DN  &kp C_MUTE  &kp C_VOL_UP  &tog GAME
         &kp F5  &kp F6    &kp F7    &kp F8    &bt BT_NXT           &kp C_BRI_DN  &kp LSFT      &kp LGUI    &kp LALT      &kp LCTL 
         &kp F9  &kp F10   &kp F11   &kp F12   &bt BT_PRV           &sys_reset    &kp C_PREV    &kp C_PP    &kp C_NEXT    &tog ALT   
-                                &trans  &bt BT_CLR  &trans         &kp ENTER  &trans  &trans
+                                &trans  &bt BT_CLR  &none          &none  &bootloader  &trans
       >;
       sensor-bindings = <&inc_dec_kp C_BRI_UP C_BRI_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
     };
