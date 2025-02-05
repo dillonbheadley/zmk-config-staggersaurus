@@ -109,7 +109,7 @@
         &kp Z  &kp X  &kp C  &kp V  &kp B           &kp N  &kp M  &cmaqu  &dotbang  &slashdash
             &trans  &sk LSFT  &ml NAV LGUI          &mo SYMB  &spcbspc  &trans
       >;
-      sensor-bindings = <&inc_dec_kp LG(TAB) LG(LS(TAB)) &mouse_scroll_encoder>;
+      sensor-bindings = <&inc_dec_kp TAB LS(TAB) &mouse_scroll_encoder>;
     };
 
     // engram layout flipped
@@ -125,7 +125,7 @@
 
       >;
       // &trans  &ml NAV LSFT  &ml NUMB LGUI        &mo SYMB  &kp SPACE  &trans
-      sensor-bindings = <&inc_dec_kp LG(TAB) LG(LS(TAB)) &mouse_scroll_encoder>;
+      sensor-bindings = <&inc_dec_kp TAB LS(TAB) &mouse_scroll_encoder>;
     };
 
     nav_layer {
@@ -159,7 +159,7 @@
         &kp TILDE  &kp PIPE   &kp UNDER   &kp GRAV  &kp BSLH        &kp EQUAL  &kp N7  &kp N8  &kp N9  &kp DOT
                                 &trans  &kp LSFT  &trans            &none  &sk LGUI  &trans
       >;
-      sensor-bindings = <&inc_dec_kp TAB LS(TAB) &inc_dec_kp C_VOL_UP C_VOL_DN>;
+      sensor-bindings = <&inc_dec_kp DOWN UP &inc_dec_kp C_VOL_UP C_VOL_DN>;
     };	
 
         // &kp F1  &kp F2    &kp F3    &kp F4    &bt BT_SEL 0         &kp C_BRI_UP  &kp C_VOL_DN  &kp C_MUTE  &kp C_VOL_UP  &tog GAME
