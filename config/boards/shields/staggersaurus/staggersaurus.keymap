@@ -167,7 +167,7 @@
         // &kp F9  &kp F10   &kp F11   &kp F12   &bt BT_PRV           &sys_reset    &kp C_PREV    &kp C_PP    &kp C_NEXT    &tog ALT   
     function_layer {
       bindings = <
-        &kp F1    &kp F2    &kp F3      &kp F4      &kp F10         &bt BT_SEL 0   &msc SCRL_DOWN  &mmv MOVE_UP     &msc SCRL_UP    &sk GLOBE
+        &kp F1    &kp F2    &kp F3      &kp F4      &kp F10         &bt BT_SEL 0   &msc SCRL_DOWN  &mmv MOVE_UP     &msc SCRL_UP    &kp LC(UP)
         &kp F9    &sk LSFT  &mkp RCLK   &mkp LCLK   &kp F11         &bt BT_NXT     &mmv MOVE_LEFT  &mmv MOVE_DOWN   &mmv MOVE_RIGHT  &mkp MCLK  
         &kp F5    &kp F6    &kp F7      &kp F8      &kp F12         &bt BT_PRV     &sk LSFT       &sk LGUI          &sk LALT        &sk LCTL    
                             &trans  &bootloader  &none              &none  &bt BT_CLR  &trans
