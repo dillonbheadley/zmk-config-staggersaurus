@@ -155,12 +155,12 @@
       // &kp LT    &kp LBKT  &kp LPAR    &kp LBRC  &kp BSLH        &kp FSLH    &kp RBRC  &kp RPAR    &kp RBKT    &kp GT
       bindings = <  
         &kp GT     &kp RBKT   &kp RPAR    &kp RBRC  &kp PLUS        &kp SEMI   &kp N1  &kp N2  &kp N3  &kp CMMA
-        &kp PIPE  &kp UNDER   &kp MINUS   &kp GRAV  &kp TILDE        &kp COLON  &kp N4  &kp N5  &kp N6  &kp N0
+        &kp PIPE   &kp AMPS   &kp MINUS   &kp GRAV  &kp TILDE       &kp COLON  &kp N4  &kp N5  &kp N6  &kp N0
         &kp LT     &kp LBKT   &kp LPAR    &kp LBRC  &kp BSLH        &kp EQUAL  &kp N7  &kp N8  &kp N9  &kp DOT
                                 &trans  &kp LSFT  &trans            &none  &sk LGUI  &trans
       >;
       sensor-bindings = <&inc_dec_kp DOWN UP &inc_dec_kp C_VOL_UP C_VOL_DN>;
-    };	
+    }; 
 
         // &kp F1  &kp F2    &kp F3    &kp F4    &bt BT_SEL 0         &kp C_BRI_UP  &kp C_VOL_DN  &kp C_MUTE  &kp C_VOL_UP  &tog GAME
         // &kp F5  &kp F6    &kp F7    &kp F8    &bt BT_NXT           &kp C_BRI_DN  &kp LSFT      &kp LGUI    &kp LALT      &kp LCTL 
