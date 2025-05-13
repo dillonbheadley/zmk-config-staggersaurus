@@ -71,7 +71,7 @@
       bindings = <&kp SPACE>, <&kp BKSP>;
       mods = <(MOD_LSFT)>;
     };
-    spcbspc: right_mid_click{
+    rmclick: right_mid_click{
       compatible = "zmk,behavior-mod-morph";
       #binding-cells = <0>;
       bindings = <&mkp RCLK>, <&mkp MCLK>;
@@ -174,7 +174,7 @@
     function_layer {
       bindings = <
         &kp F1    &kp F2    &kp F3      &kp F4    &kp F5          &bt BT_SEL 0   &msc SCRL_DOWN  &mmv MOVE_UP     &msc SCRL_UP    &bt BT_CLR
-        &kp F6    &kp F7    &sk LSFT   &mkp LCLK  &mkp RCLK       &bt BT_NXT     &mmv MOVE_LEFT  &mmv MOVE_DOWN   &mmv MOVE_RIGHT  &kp LC(UP)  
+        &kp F6    &kp F7    &sk LSFT   &mkp LCLK  &rmclick        &bt BT_NXT     &mmv MOVE_LEFT  &mmv MOVE_DOWN   &mmv MOVE_RIGHT  &kp LC(UP)  
         &kp F8    &kp F9    &kp F10      &kp F11  &kp F12         &bt BT_PRV     &sk LSFT        &sk LGUI         &sk LALT        &sk LCTL    
                             &trans  &bootloader  &none            &none  &mkp MCLK  &trans
       >;
