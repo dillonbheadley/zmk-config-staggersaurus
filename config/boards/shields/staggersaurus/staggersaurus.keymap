@@ -71,6 +71,12 @@
       bindings = <&kp SPACE>, <&kp BKSP>;
       mods = <(MOD_LSFT)>;
     };
+    spcbspc: right_mid_click{
+      compatible = "zmk,behavior-mod-morph";
+      #binding-cells = <0>;
+      bindings = <&mkp RCLK>, <&mkp MCLK>;
+      mods = <(MOD_LSFT)>;
+    };
     mouse_scroll_encoder: mouse_scroll_encoder {
       compatible = "zmk,behavior-sensor-rotate";
       #sensor-binding-cells = <0>;
@@ -168,9 +174,9 @@
     function_layer {
       bindings = <
         &kp F1    &kp F2    &kp F3      &kp F4    &kp F5          &bt BT_SEL 0   &msc SCRL_DOWN  &mmv MOVE_UP     &msc SCRL_UP    &bt BT_CLR
-        &kp F6    &kp F7    &sk LSFT   &mkp LCLK  &mkp MCLK       &bt BT_NXT     &mmv MOVE_LEFT  &mmv MOVE_DOWN   &mmv MOVE_RIGHT  &kp LC(UP)  
+        &kp F6    &kp F7    &sk LSFT   &mkp LCLK  &mkp RCLK       &bt BT_NXT     &mmv MOVE_LEFT  &mmv MOVE_DOWN   &mmv MOVE_RIGHT  &kp LC(UP)  
         &kp F8    &kp F9    &kp F10      &kp F11  &kp F12         &bt BT_PRV     &sk LSFT        &sk LGUI         &sk LALT        &sk LCTL    
-                            &trans  &bootloader  &none            &none  &mkp RCLK  &trans
+                            &trans  &bootloader  &none            &none  &mkp MCLK  &trans
       >;
       sensor-bindings = <&inc_dec_kp C_BRI_UP C_BRI_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
     };
