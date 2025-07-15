@@ -143,7 +143,7 @@
         &kp Q  &kp W  &kp E  &kp R  &kp T           &kp Y  &kp U  &kp I   &kp O     &kp QUOT 
         &kp A  &kp S  &kp D  &kp F  &kp G           &kp H  &kp J  &kp K   &kp L     &kp P   
         &kp Z  &kp X  &kp C  &kp V  &kp B           &kp N  &kp M  &shftcmma  &shftdot  &shftslash
-            &trans  &sk LSFT  &ml NAV LGUI          &mo SYMB  &spcbspc  &trans
+            &trans  &sk LSFT  &ml NAV LGUI          &ml SYMB LC(LG(LALT))  &spcbspc  &trans
       >;
       sensor-bindings = <&inc_dec_kp TAB LS(TAB) &mouse_scroll_encoder>;
     };
