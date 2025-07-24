@@ -64,13 +64,13 @@
     };
     cmb_bang {
       timeout-ms = <50>;
-      key-positions = <11 12>;
+      key-positions = <16 17>;
       bindings = <&kp BANG>;
       layers = <DEFAULT>;
     };
     cmb_qmark {
       timeout-ms = <50>;
-      key-positions = <12 13>;
+      key-positions = <17 18>;
       bindings = <&kp QMARK>;
       layers = <DEFAULT>;
     };
