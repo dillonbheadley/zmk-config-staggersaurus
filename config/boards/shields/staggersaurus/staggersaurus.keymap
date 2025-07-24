@@ -62,6 +62,24 @@
       bindings = <&kp GT>;
       layers = <SYMB>;
     };
+    cmb_bang {
+      timeout-ms = <50>;
+      key-positions = <11 12>;
+      bindings = <&kp BANG>;
+      layers = <DEFAULT>;
+    };
+    cmb_qmark {
+      timeout-ms = <50>;
+      key-positions = <12 13>;
+      bindings = <&kp QMARK>;
+      layers = <DEFAULT>;
+    };
+    cmb_btclr {
+      timeout-ms = <50>;
+      key-positions = <21 24>;
+      bindings = <&bt BT_CLR>;
+      layers = <FUNC>;
+    };
   };
 
   // Maybe put these in combos if no encoders
