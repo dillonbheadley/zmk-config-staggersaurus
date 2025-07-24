@@ -82,13 +82,13 @@
     };
     cmb_scrl_left {
       timeout-ms = <50>;
-      key-positions = <6 7>;
+      key-positions = <7 8>;
       bindings = <&msc SCRL_LEFT>;
       layers = <FUNC>;
     };
     cmb_scrl_right {
       timeout-ms = <50>;
-      key-positions = <7 8>;
+      key-positions = <6 7>;
       bindings = <&msc SCRL_RIGHT>;
       layers = <FUNC>;
     };
