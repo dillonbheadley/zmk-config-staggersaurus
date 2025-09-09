@@ -203,7 +203,7 @@
 
     nav_layer {
       bindings = <
-        &tog GAME  &sk RALT  &key_repeat  &caps_word  &sk GLOBE             &kp PG_UP     &kp LBKT        &kp UP          &kp RBKT        &tog ALT 
+        &tog GAME  &sk RALT  &key_repeat  &caps_word  &sk GLOBE             &kp PG_UP     &kp LBKT        &kp UP          &kp RBKT        &trans 
         &sk LCTL  &sk LALT  &sk LGUI      &sk LSFT    &sk LC(RS(LALT))      &kp PG_DN     &kp LEFT        &kp DOWN        &kp RIGHT       &kp ENTER
         &kp ESC   &kp TAB   &kp ENTER     &kp SPC     &kp BKSP              &kp LC(MINUS) &kp C_PREV      &kp C_PP        &kp C_NEXT        &kp DEL 
                                         &trans  &none  &trans               &trans  &kp BKSP  &trans
