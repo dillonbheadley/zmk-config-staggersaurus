@@ -227,7 +227,7 @@
     function_layer {
       bindings = <
         &bootloader  &kp F1  &kp F2     &kp F3    &kp F4          &bt BT_SEL 0   &msc SCRL_DOWN  &mmv MOVE_UP     &msc SCRL_UP    &bt BT_CLR
-        &sk LSFT  &mkp MCLK  &mkp RCLK  &mkp LCLK  &rmclick        &bt BT_NXT     &mmv MOVE_LEFT  &mmv MOVE_DOWN   &mmv MOVE_RIGHT  &kp LC(UP)  
+        &sk LSFT  &mkp MCLK  &mkp RCLK  &mkp LCLK  &kp F10        &bt BT_NXT     &mmv MOVE_LEFT  &mmv MOVE_DOWN   &mmv MOVE_RIGHT  &kp LC(UP)  
         &kp F5    &kp F6    &kp F7      &kp F8    &kp F9          &bt BT_PRV     &sk LSFT        &sk LGUI         &sk LALT        &sk LCTL    
                             &trans  &none  &trans            &trans  &none  &trans
       >;
