@@ -206,7 +206,7 @@
         &tog GAME  &sk RALT  &key_repeat  &caps_word  &sk GLOBE             &kp PG_UP     &kp LBKT        &kp UP          &kp RBKT        &trans 
         &sk LCTL  &sk LALT  &sk LGUI      &sk LSFT    &sk LC(RS(LALT))      &kp PG_DN     &kp LEFT        &kp DOWN        &kp RIGHT       &kp ENTER
         &kp ESC   &kp TAB   &kp ENTER     &kp SPC     &kp BKSP              &kp LC(MINUS) &kp C_PREV      &kp C_PP        &kp C_NEXT        &kp DEL 
-                                        &trans  &none  &trans               &trans  &kp BKSP  &trans
+                                        &trans  &none  &trans               &trans  &lt SYMB BKSP  &trans
       >;
       sensor-bindings = <&inc_dec_kp C_BRI_UP C_BRI_DN &inc_dec_kp LS(LG(Z)) LG(Z)>;
     };
