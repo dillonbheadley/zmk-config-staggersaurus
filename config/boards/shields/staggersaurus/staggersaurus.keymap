@@ -42,6 +42,43 @@
 / {
   combos {
     compatible = "zmk,combos";
+    z {
+      timeout-ms = <50>;
+      key-positions = <11 12>;
+      bindings = <&kp Z>;
+      layers = <DEFAULT>;
+    };
+    b {
+      timeout-ms = <50>;
+      key-positions = <12 13>;
+      bindings = <&kp B>;
+      layers = <DEFAULT>;
+    };
+    cmd {
+      timeout-ms = <50>;
+      key-positions = <6 7>;
+      bindings = <&sk LGUI>;
+      layers = <DEFAULT>;
+    };
+    shrtct {
+      timeout-ms = <50>;
+      key-positions = <7 8>;
+      bindings = <&sk LC(LA(LGUI))>;
+      layers = <DEFAULT>;
+    };
+    j {
+      timeout-ms = <50>;
+      key-positions = <16 17>;
+      bindings = <&kp J>;
+      layers = <DEFAULT>;
+    };
+    slash {
+      timeout-ms = <50>;
+      key-positions = <17 18>;
+      bindings = <&kp FSLH>;
+      layers = <DEFAULT>;
+    };
+
     codeprev {
       timeout-ms = <50>;
       key-positions = <6 7>;
@@ -93,13 +130,13 @@
     };
     lt {
       timeout-ms = <50>;
-      key-positions = <22 23>;
+      key-positions = <1 2>;
       bindings = <&kp LT>;
       layers = <SYMB>;
     };
     gt {
       timeout-ms = <50>;
-      key-positions = <26 27>;
+      key-positions = <7 8>;
       bindings = <&kp GT>;
       layers = <SYMB>;
     };
@@ -193,7 +230,7 @@
       bindings = <
         &kp Q  &kp W  &kp E  &kp R  &kp T           &kp Y  &kp U  &kp I   &kp O     &kp QUOT 
         &kp A  &kp S  &kp D  &kp F  &kp G           &kp H  &kp N  &kp K   &kp L     &kp P   
-        &kp Z  &kp X  &kp C  &kp V  &kp B           &kp J  &kp M  &shftcmma  &shftdot  &shftslash
+        &kp Z  &kp X  &kp C  &kp V  &kp B           &kp Ja  &kp M  &shftcmma  &shftdot  &shftslash
             &trans  &ml NAV LSFT  &sk LGUI          &sk LC(LG(LALT))  &lt SYMB SPACE  &trans
       >;
       sensor-bindings = <&inc_dec_kp TAB LS(TAB) &mouse_scroll_encoder>;
