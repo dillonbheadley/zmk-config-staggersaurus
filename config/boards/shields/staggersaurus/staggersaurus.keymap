@@ -43,124 +43,124 @@
   combos {
     compatible = "zmk,combos";
     z {
-      timeout-ms = <30>;
+      timeout-ms = <40>;
       key-positions = <11 12>;
       bindings = <&kp Z>;
       layers = <DEFAULT>;
     };
     b {
-      timeout-ms = <30>;
+      timeout-ms = <40>;
       key-positions = <12 13>;
       bindings = <&kp B>;
       layers = <DEFAULT>;
     };
     shrtct {
-      timeout-ms = <30>;
+      timeout-ms = <40>;
       key-positions = <6 7>;
       bindings = <&sk LC(LA(LGUI))>;
       layers = <DEFAULT>;
     };
     j {
-      timeout-ms = <30>;
+      timeout-ms = <40>;
       key-positions = <16 17>;
       bindings = <&kp J>;
       layers = <DEFAULT>;
     };
     slash {
-      timeout-ms = <30>;
+      timeout-ms = <40>;
       key-positions = <17 18>;
       bindings = <&kp FSLH>;
       layers = <DEFAULT>;
     };
 
     codeprev {
-      timeout-ms = <30>;
+      timeout-ms = <40>;
       key-positions = <6 7>;
       bindings = <&kp LC(MINUS)>;
       layers = <NAV>;
     };
     codenext {
-      timeout-ms = <30>;
+      timeout-ms = <40>;
       key-positions = <7 8>;
       bindings = <&kp LC(LS(MINUS))>;
       layers = <NAV>;
     };
     prev {
-      timeout-ms = <30>;
+      timeout-ms = <40>;
       key-positions = <26 27>;
       bindings = <&kp C_PREV>;
       layers = <NAV>;
     };
     next {
-      timeout-ms = <30>;
+      timeout-ms = <40>;
       key-positions = <27 28>;
       bindings = <&kp C_NEXT>;
       layers = <NAV>;
     };
 
     lpar {
-      timeout-ms = <30>;
+      timeout-ms = <40>;
       key-positions = <12 13>;
       bindings = <&kp LPAR>;
       layers = <SYMB>;
     };
     rpar {
-      timeout-ms = <30>;
+      timeout-ms = <40>;
       key-positions = <16 17>;
       bindings = <&kp RPAR>;
       layers = <SYMB>;
     };
     lbkt {
-      timeout-ms = <30>;
+      timeout-ms = <40>;
       key-positions = <11 12>;
       bindings = <&kp LBKT>;
       layers = <SYMB>;
     };
     rbkt {
-      timeout-ms = <30>;
+      timeout-ms = <40>;
       key-positions = <17 18>;
       bindings = <&kp RBKT>;
       layers = <SYMB>;
     };
     lbrc {
-      timeout-ms = <30>;
+      timeout-ms = <40>;
       key-positions = <2 3>;
       bindings = <&kp LBRC>;
       layers = <SYMB>;
     };
     rbrc {
-      timeout-ms = <30>;
+      timeout-ms = <40>;
       key-positions = <6 7>;
       bindings = <&kp RBRC>;
       layers = <SYMB>;
     };
     lt {
-      timeout-ms = <30>;
+      timeout-ms = <40>;
       key-positions = <1 2>;
       bindings = <&kp LT>;
       layers = <SYMB>;
     };
     gt {
-      timeout-ms = <30>;
+      timeout-ms = <40>;
       key-positions = <7 8>;
       bindings = <&kp GT>;
       layers = <SYMB>;
     };
 
     cmb_btclr {
-      timeout-ms = <30>;
+      timeout-ms = <40>;
       key-positions = <10 19>;
       bindings = <&bt BT_CLR>;
       layers = <FUNC>;
     };
     cmb_scrl_left {
-      timeout-ms = <30>;
+      timeout-ms = <40>;
       key-positions = <7 8>;
       bindings = <&msc SCRL_LEFT>;
       layers = <FUNC>;
     };
     cmb_scrl_right {
-      timeout-ms = <30>;
+      timeout-ms = <40>;
       key-positions = <6 7>;
       bindings = <&msc SCRL_RIGHT>;
       layers = <FUNC>;
