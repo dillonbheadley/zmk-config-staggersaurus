@@ -1,2 +1,5 @@
-config SHIELD_CRUMPLE
-    def_bool $(shields_list_contains,crumple)
+config SHIELD_CRUMPLE_LEFT
+    def_bool $(shields_list_contains,crumple_left)
+
+config SHIELD_CRUMPLE_RIGHT
+    def_bool $(shields_list_contains,crumple_right)

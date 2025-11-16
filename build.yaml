@@ -14,6 +14,8 @@
 ---
 include:
   - board: nice_nano_v2
-    shield: crumple
+    shield: crumple_left
+  - board: nice_nano_v2
+    shield: crumple_right
   # - board: nice_nano_v2
   #   shield: settings_reset

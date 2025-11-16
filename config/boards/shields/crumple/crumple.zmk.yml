@@ -6,3 +6,6 @@ url: https://github.com/dillonbheadley/zmk-config-staggersaurus/
 requires: [pro_micro]
 features:
   - keys
+siblings:
+  - crumple_left
+  - crumple_right
