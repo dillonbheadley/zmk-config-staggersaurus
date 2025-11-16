@@ -1,0 +1,6 @@
+if SHIELD_CRUMPLE
+
+config ZMK_KEYBOARD_NAME
+    default "Crumple"
+
+endif
