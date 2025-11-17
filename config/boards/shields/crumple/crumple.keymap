@@ -185,6 +185,12 @@
       bindings = <&kp GT>;
       layers = <SYMB>;
     };
+    reset {
+      timeout-ms = <40>;
+      key-positions = <25 26 27>;
+      bindings = <&sys_reset>;
+      layers = <SYMB>;
+    };
 
     btclr {
       timeout-ms = <40>;
