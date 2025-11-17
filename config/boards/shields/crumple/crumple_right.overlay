@@ -1,5 +1,0 @@
-#include "crumple.dtsi"
-
-&default_transform {
-    col-offset = <14>;
-};

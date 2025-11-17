@@ -1,6 +1,0 @@
-if SHIELD_STAGGERSAURUS
-
-config ZMK_KEYBOARD_NAME
-    default "Staggersaurus"
-
-endif
