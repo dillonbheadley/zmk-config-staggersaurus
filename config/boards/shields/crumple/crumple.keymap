@@ -32,6 +32,8 @@
 };
 
 &mmv {
+  // trigger-period-ms = <2>;
+  // time-to-max-speed-ms = <2>;
   acceleration-exponent = <1>;
 };
 
@@ -233,6 +235,7 @@
       quick-tap-ms = <200>;
       bindings = <&mo>, <&sk>;
     };
+
     shftcmma: shift_comma {
       compatible = "zmk,behavior-mod-morph";
       #binding-cells = <0>;
