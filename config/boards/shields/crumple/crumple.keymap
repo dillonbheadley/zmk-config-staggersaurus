@@ -187,12 +187,6 @@
       bindings = <&kp GT>;
       layers = <SYMB>;
     };
-    reset {
-      timeout-ms = <40>;
-      key-positions = <25 26 27>;
-      bindings = <&sys_reset>;
-      layers = <SYMB>;
-    };
 
     btclr {
       timeout-ms = <40>;
@@ -200,10 +194,28 @@
       bindings = <&bt BT_CLR>;
       layers = <FUNC>;
     };
-    btsel0 {
+    f9 {
+      timeout-ms = <50>;
+      key-positions = <1 2>;
+      bindings = <&kp F9>;
+      layers = <FUNC>;
+    };
+    f10 {
       timeout-ms = <50>;
       key-positions = <2 3>;
-      bindings = <&bt BT_SEL 0>;
+      bindings = <&kp F9>;
+      layers = <FUNC>;
+    };
+    f11 {
+      timeout-ms = <50>;
+      key-positions = <21 22>;
+      bindings = <&kp F9>;
+      layers = <FUNC>;
+    };
+    f12 {
+      timeout-ms = <50>;
+      key-positions = <22 23>;
+      bindings = <&kp F9>;
       layers = <FUNC>;
     };
     btnxt {
@@ -285,17 +297,17 @@
 
     symbols_layer {
       bindings = <
-        &kp DOT    &kp N1  &kp N2  &kp N3  &kp STAR         &kp PLUS   &kp GRAV   &kp AMPS   &kp PIPE   &kp BSLH
+        &kp DOT    &shft1   &kp N2  &kp N3  &kp STAR         &kp PLUS   &kp GRAV   &kp AMPS   &kp PIPE   &kp BSLH
         &kp ATSN    &kp N4  &kp N5  &kp N6  &kp N0          &kp EQUAL  &mt LSFT MINUS  &mt LGUI UNDER  &mt LALT COLON   &mt LCTL SEMI
-                    &kp N7  &kp N8  &kp N9  &lm NAV LSFT    &none   &kp FSLH   &kp DLLR   &kp PRCT
+                    &kp N7  &kp N8  &kp N9  &lm NAV LSFT    &none   &kp FSLH   &kp DLLR   &sys_reset
       >;
     };
 
     function_layer {
       bindings = <
-        &kp F1  &kp F2     &kp F3     &kp F4     &bootloader    &bt BT_SEL 0   &msc SCRL_DOWN  &mmv MOVE_UP     &msc SCRL_UP     &sys_reset
-        &sk LCTL  &mkp MCLK  &mkp RCLK  &mkp LCLK  &kp F7        &bt BT_NXT     &mmv MOVE_LEFT  &mmv MOVE_DOWN   &mmv MOVE_RIGHT  &kp LC(UP)
-                &kp F9     &kp F10    &kp F11    &none          &none     &sk LSFT        &sk LGUI         &sk LALT
+        &kp F1    &kp F2     &kp F3     &kp F4     &kp F5             &bt BT_SEL 0   &msc SCRL_DOWN  &mmv MOVE_UP     &msc SCRL_UP     &trans
+        &sk LCTL  &mkp MCLK  &mkp RCLK  &mkp LCLK  &bootloader        &bt BT_NXT     &mmv MOVE_LEFT  &mmv MOVE_DOWN   &mmv MOVE_RIGHT  &kp LC(UP)
+                &kp F6     &kp F7    &kp F8    &none                  &none     &sk LSFT        &sk LGUI         &sk LALT
       >;
     };
   };
