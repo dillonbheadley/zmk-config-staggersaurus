@@ -40,27 +40,18 @@
 / {
   combos {
     compatible = "zmk,combos";
-    lshft {
+    shft {
       timeout-ms = <40>;
-      key-positions = <23 13>;
-      bindings = <&kp LSFT>;
+      key-positions = <2 3>;
+      bindings = <&sk LSFT>;
+      layers = <DEFAULT>;
     };
-    lcmd {
+    cmd {
       timeout-ms = <40>;
-      key-positions = <23 12>;
-      bindings = <&kp LGUI>;
+      key-positions = <6 7>;
+      bindings = <&sk LGUI>;
+      layers = <DEFAULT>;
     };
-    rshft {
-      timeout-ms = <40>;
-      key-positions = <24 16>;
-      bindings = <&kp RSFT>;
-    };
-    rcmd {
-      timeout-ms = <40>;
-      key-positions = <24 17>;
-      bindings = <&kp RGUI>;
-    };
-
     z {
       timeout-ms = <40>;
       key-positions = <11 12>;
@@ -71,12 +62,6 @@
       timeout-ms = <40>;
       key-positions = <12 13>;
       bindings = <&kp B>;
-      layers = <DEFAULT>;
-    };
-    shrtct {
-      timeout-ms = <40>;
-      key-positions = <6 7>;
-      bindings = <&sk LC(LA(LGUI))>;
       layers = <DEFAULT>;
     };
     j {
@@ -304,15 +289,15 @@
       bindings = <
         &kp Q  &kp W  &kp E  &kp R  &kp T                           &kp Y  &kp U  &kp I   &kp O     &kp QUOT
         &kp A  &kp S  &kp D  &kp F  &kp G                           &kp H  &kp N  &kp K   &kp L     &kp P
-                &kp X  &kp C  &kp V  &lm NAV LC(LA(LGUI))   &lt SYMB SPACE  &kp M  &shftcmma  &shftdot
+               &kp X  &kp C  &kp V  &lm NAV LC(LA(LGUI))   &lt SYMB SPACE  &kp M  &shftcmma  &shftdot
       >;
     };
 
     nav_layer {
       bindings = <
-        &kp ESC   &sk RALT  &key_repeat  &sk LC(RS(LALT))  &sk GLOBE        &kp PG_UP     &kp LBKT        &kp UP          &kp RBKT        &trans
-        &sk LCTL  &sk LALT  &sk LGUI      &sk LSFT    &caps_word            &kp PG_DN     &kp LEFT        &kp DOWN        &kp RIGHT       &kp ENTER
-                 &kp TAB   &kp ENTER     &kp SPC     &none             &lt SYMB BKSP  &kp LG(Z)      &kp C_PP        &kp LG(LS(Z))
+        &kp ESC   &sk RALT  &key_repeat  &caps_word  &sk GLOBE        &kp PG_UP     &kp LBKT        &kp UP          &kp RBKT        &trans
+        &sk LCTL  &sk LALT  &sk LGUI     &sk LSFT    &caps_word       &kp PG_DN     &kp LEFT        &kp DOWN        &kp RIGHT       &kp ENTER
+                  &kp TAB   &kp ENTER    &kp SPC     &none            &lt SYMB BKSP  &kp LG(Z)      &kp C_PP        &kp LG(LS(Z))
       >;
     };
 
