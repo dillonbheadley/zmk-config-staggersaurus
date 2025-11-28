@@ -42,22 +42,22 @@
     compatible = "zmk,combos";
     lshft {
       timeout-ms = <40>;
-      key-positions = <18 13>;
+      key-positions = <23 13>;
       bindings = <&kp LSFT>;
     };
     lcmd {
       timeout-ms = <40>;
-      key-positions = <18 12>;
+      key-positions = <23 12>;
       bindings = <&kp LGUI>;
     };
     rshft {
       timeout-ms = <40>;
-      key-positions = <19 16>;
+      key-positions = <24 16>;
       bindings = <&kp RSFT>;
     };
     rcmd {
       timeout-ms = <40>;
-      key-positions = <19 17>;
+      key-positions = <24 17>;
       bindings = <&kp RGUI>;
     };
 
