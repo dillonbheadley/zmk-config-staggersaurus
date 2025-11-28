@@ -244,7 +244,6 @@
       flavor = "balanced";
       tapping-term-ms = <150>;
       quick-tap-ms = <200>;
-      quick-release;
       bindings = <&sk>, <&kp>;
     };
 
