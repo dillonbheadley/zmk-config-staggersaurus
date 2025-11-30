@@ -243,7 +243,7 @@
       #binding-cells = <2>;
       flavor = "balanced";
       tapping-term-ms = <150>;
-      quick-tap-ms = <200>;azfasdffasdfd
+      quick-tap-ms = <200>;
       bindings = <&sk>, <&kp>;
     };
 
