@@ -243,7 +243,7 @@
       #binding-cells = <2>;
       flavor = "balanced";
       tapping-term-ms = <150>;
-      quick-tap-ms = <200>;
+      quick-tap-ms = <200>;azfasdffasdfd
       bindings = <&sk>, <&kp>;
     };
 
@@ -288,7 +288,7 @@
 
     nav_layer {
       bindings = <
-        &kp ESC   &sk RALT  &key_repeat  &caps_word  &trans           &kp PG_UP     &kp LBKT        &kp UP          &kp RBKT        &trans
+        &kp ESC   &sk RALT  &key_repeat  &caps_word  &sys_reset       &kp PG_UP     &kp LBKT        &kp UP          &kp RBKT        &trans
         &sk LCTL  &sk LALT  &sk LGUI     &sk LSFT    &sk GLOBE        &kp PG_DN     &kp LEFT        &kp DOWN        &kp RIGHT       &kp ENTER
                   &kp TAB   &kp ENTER    &kp SPC     &none            &lt SYMB BKSP  &kp LG(Z)      &kp C_PP        &kp LG(LS(Z))
       >;
