@@ -208,6 +208,12 @@
       bindings = <&kp F12>;
       layers = <FUNC>;
     };
+    bt0 {
+      timeout-ms = <50>;
+      key-positions = <11 12 13>;
+      bindings = <&bt BT_NXT>;
+      layers = <FUNC>;
+    };
     btnxt {
       timeout-ms = <50>;
       key-positions = <12 13>;
