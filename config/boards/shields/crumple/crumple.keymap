@@ -287,7 +287,7 @@
       bindings = <
         &kp Q  &kp W  &kp E  &kp R  &kp T                           &kp Y  &kp U  &kp I   &kp O     &kp QUOT
         &kp A  &kp S  &kp D  &kp F  &kp G                           &kp H  &kp N  &kp K   &kp L     &kp P
-               &kp X  &kp C  &kp V  &lm NAV LC(LA(LGUI))   &lt SYMB SPACE  &kp M  &shftcmma  &shftdot
+               &kp X  &kp C  &kp V  &lm NAV LC(LA(LSFT))   &lt SYMB SPACE  &kp M  &shftcmma  &shftdot
       >;
     };
 
