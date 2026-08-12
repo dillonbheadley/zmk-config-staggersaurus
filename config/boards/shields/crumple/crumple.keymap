@@ -104,18 +104,6 @@
       bindings = <&kp BKSP>;
       layers = <NAV>;
     };
-    codeprev {
-      timeout-ms = <50>;
-      key-positions = <6 7>;
-      bindings = <&kp LC(MINUS)>;
-      layers = <NAV>;
-    };
-    codenext {
-      timeout-ms = <50>;
-      key-positions = <7 8>;
-      bindings = <&kp LC(LS(MINUS))>;
-      layers = <NAV>;
-    };
     prev {
       timeout-ms = <50>;
       key-positions = <25 26>;
@@ -210,7 +198,7 @@
     };
     bt0 {
       timeout-ms = <50>;
-      key-positions = <11 12 13>;
+      key-positions = <11 12>;
       bindings = <&bt BT_NXT>;
       layers = <FUNC>;
     };
@@ -278,7 +266,6 @@
         then-layer = <FUNC>;
       };
     };
-
   };
 
   keymap {
@@ -302,16 +289,16 @@
     symbols_layer {
       bindings = <
         &kp DOT    &shft1   &kp N2  &kp N3  &kp STAR         &kp PLUS   &kp GRAV   &kp AMPS   &kp PIPE   &kp BSLH
-        &kp ATSN    &kp N4  &kp N5  &kp N6  &kp N0          &kp EQUAL  &smt LSFT MINUS  &smt LGUI UNDER  &smt LALT COLON   &smt LCTL SEMI
+        &kp ATSN     &kp N4  &kp N5  &kp N6  &kp N0          &kp EQUAL  &smt LSFT MINUS  &smt LGUI UNDER  &smt LALT COLON   &smt LCTL SEMI
                     &kp N7  &kp N8  &kp N9  &lm NAV LSFT    &none   &kp FSLH   &kp DLLR   &kp TILDE
       >;
     };
 
     function_layer {
       bindings = <
-        &kp F1    &kp F2     &kp F3     &kp F4     &kp F5             &bt BT_SEL 0   &msc SCRL_DOWN  &mmv MOVE_UP     &msc SCRL_UP     &trans
+        &kp F1    &kp F2     &kp F3     &kp F4     &kp F5             &bt BT_SEL 0   &msc SCRL_DOWN  &mmv MOVE_UP     &msc SCRL_UP     &kp LS(LG(LC(N4)))
         &kp LCTL  &mkp MCLK  &mkp RCLK  &mkp LCLK  &bootloader        &bt BT_NXT     &mmv MOVE_LEFT  &mmv MOVE_DOWN   &mmv MOVE_RIGHT  &kp LC(UP)
-                &kp F6     &kp F7    &kp F8    &trans                  &trans     &kp LSFT        &kp LGUI         &kp LALT
+                &kp F6     &kp F7    &kp F8    &none                  &none     &kp LSFT        &kp LGUI         &kp LALT
       >;
     };
   };
