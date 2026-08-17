@@ -248,6 +248,13 @@
             layers = <FUNC>;
         };
 
+        boot {
+            timeout-ms = <50>;
+            key-positions = <11 12 13>;
+            bindings = <&bootloader>;
+            layers = <FUNC>;
+        };
+
         scrl_left {
             timeout-ms = <50>;
             key-positions = <7 8>;
@@ -306,14 +313,6 @@
             mods = <(MOD_LSFT)>;
         };
 
-        td_kp: td_kp {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <2>;
-            bindings = <&kp>, <&kp>;
-
-            tapping-term-ms = <150>;
-        };
-
         conditional_layers {
             compatible = "zmk,conditional-layers";
 
@@ -329,7 +328,7 @@
 
         default_layer {
             bindings = <
-&kp Q  &kp W  &kp E  &kp R  &kp T                  &kp Y           &kp U  &kp I      &kp O     &td_kp APOS DQT
+&kp Q  &kp W  &kp E  &kp R  &kp T                  &kp Y           &kp U  &kp I      &kp O     &kp APOS
 &kp A  &kp S  &kp D  &kp F  &kp G                  &kp H           &kp N  &kp K      &kp L     &kp P
        &kp X  &kp C  &kp V  &lm NAV LC(LA(LSHFT))  &lt SYMB SPACE  &kp M  &shftcmma  &shftdot
             >;
@@ -345,9 +344,9 @@
 
         symbols_layer {
             bindings = <
-&kp HASH  &kp NUMBER_1  &kp N2  &kp N3  &kp STAR        &kp PLUS   &kp DOLLAR         &kp AMPS         &kp PIPE         &kp BSLH
-&kp AT    &kp N4        &kp N5  &kp N6  &kp N0          &td_kp MINUS EQUAL  &smt LSHFT GRAVE  &smt LGUI UNDER  &smt LALT COLON  &smt LCTRL SEMI
-          &kp N7        &kp N8  &kp N9  &lt NAV PERIOD  &none      &kp FSLH          &kp PERCENT  &kp TILDE
+&kp HASH  &kp NUMBER_1  &kp N2  &kp N3  &kp STAR        &kp PLUS   &kp GRAVE         &kp AMPS         &kp PIPE         &kp BSLH
+&kp AT    &kp N4        &kp N5  &kp N6  &kp N0          &kp EQUAL  &smt LSHFT MINUS  &smt LGUI UNDER  &smt LALT COLON  &smt LCTRL SEMI
+          &kp N7        &kp N8  &kp N9  &lt NAV PERIOD  &none      &kp FSLH          &kp DOLLAR  &kp TILDE
             >;
         };
 
