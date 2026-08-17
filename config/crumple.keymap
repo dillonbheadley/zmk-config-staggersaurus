@@ -275,7 +275,6 @@
 
         lt_tap: lt_tap {
             compatible = "zmk,behavior-tap-dance";
-            label = "TD_KP";
             #binding-cells = <0>;
             bindings = <&sk LC(LA(LSHFT))>, <&kp L>;
 
@@ -284,11 +283,11 @@
 
         lthmb: left_thumb {
             compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
+            #binding-cells = <0>;
             flavor = "hold-preferred";
             tapping-term-ms = <150>;
             quick-tap-ms = <200>;
-            bindings = <&mo>, <&lt_tap>;
+            bindings = <&mo NAV>, <&lt_tap>;
         };
 
         smt: sticky_mod_tap {
@@ -326,7 +325,6 @@
 
         td_kp: td_kp {
             compatible = "zmk,behavior-tap-dance";
-            label = "TD_KP";
             #binding-cells = <2>;
             bindings = <&kp>, <&kp>;
 
@@ -350,7 +348,7 @@
             bindings = <
 &kp Q  &kp W  &kp E  &kp R  &kp T                  &kp Y           &kp U  &kp I      &kp O     &kp APOS
 &kp A  &kp S  &kp D  &kp F  &kp G                  &kp H           &kp N  &kp K      &kp L     &kp P
-       &kp X  &kp C  &kp V  &lthmb NAV  &lt SYMB SPACE  &kp M  &shftcmma  &shftdot
+       &kp X  &kp C  &kp V  &lthmb &lt SYMB SPACE  &kp M  &shftcmma  &shftdot
             >;
         };
 
