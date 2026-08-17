@@ -299,6 +299,13 @@
             mods = <(MOD_LSFT)>;
         };
 
+        dollar_percent: dollar_percent {
+            compatible = "zmk,behavior-tap-dance";
+            label = "DOLLAR_PERCENT";
+            #binding-cells = <0>;
+            bindings = <&kp DOLLAR>, <&kp PERCENT>;
+        };
+
         conditional_layers {
             compatible = "zmk,conditional-layers";
 
@@ -331,18 +338,17 @@
         symbols_layer {
             bindings = <
 &kp HASH  &kp N1  &kp N2  &kp N3  &kp STAR        &kp PLUS   &kp GRAVE         &kp AMPS         &kp PIPE         &kp BSLH
-&kp AT    &kp N4        &kp N5  &kp N6  &kp N0          &kp EQUAL  &smt LSHFT MINUS  &smt LGUI UNDER  &smt LALT COLON  &smt LCTRL SEMI
-          &kp N7        &kp N8  &kp N9  &lt NAV PERIOD  &none      &kp FSLH          &kp DOLLAR  &kp TILDE
+&kp AT    &kp N4  &kp N5  &kp N6  &kp N0          &kp EQUAL  &smt LSHFT MINUS  &smt LGUI UNDER  &smt LALT COLON  &smt LCTRL SEMI
+          &kp N7  &kp N8  &kp N9  &lt NAV PERIOD  &none      &kp FSLH          &dollar_percent  &kp TILDE
             >;
         };
 
         function_layer {
             bindings = <
-&kp F1     &kp F2     &kp F3     &kp F4     &kp F5       &bt BT_SEL 0  &msc SCRL_DOWN  &mmv MOVE_UP    &msc SCRL_UP     &kp LS(LG(LC(N4)))
+&kp F1  &kp F2   &kp F3     &kp F4     &kp F5     &bt BT_SEL 0  &msc SCRL_DOWN  &mmv MOVE_UP    &msc SCRL_UP     &kp LS(LG(LC(N4)))
 &kp F9  &kp F10  &mkp RCLK  &mkp LCLK  &mkp MCLK  &bt BT_NXT    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &kp LCTRL
-           &kp F6     &kp F7     &kp F8     &none        &none         &kp LSHFT       &kp LGUI        &kp LALT
+        &kp F6   &kp F7     &kp F8     &none      &none         &kp LSHFT       &kp LGUI        &kp LALT
             >;
         };
     };
 };
-
