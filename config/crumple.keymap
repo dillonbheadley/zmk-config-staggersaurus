@@ -336,7 +336,7 @@
 
         nav_layer {
             bindings = <
-&kp ESC    &sk RALT  &key_repeat  &caps_word  &mo FUNC   &kp PG_UP      &kp LBKT   &kp UP    &kp RBKT       &out OUT_TOG
+&kp ESC    &sk RALT  &key_repeat  &caps_word  &mo SYMB   &kp PG_UP      &kp LBKT   &kp UP    &kp RBKT       &out OUT_TOG
 &sk LCTRL  &sk LALT  &sk LGUI     &sk LSHFT   &kp GLOBE  &kp PG_DN      &kp LEFT   &kp DOWN  &kp RIGHT      &kp ENTER
            &kp TAB   &kp ENTER    &kp SPACE   &none      &lt SYMB BSPC  &kp LG(Z)  &kp C_PP  &kp LG(LS(Z))
             >;
