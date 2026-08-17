@@ -206,20 +206,6 @@
             layers = <FUNC>;
         };
 
-        f9 {
-            timeout-ms = <50>;
-            key-positions = <1 2>;
-            bindings = <&kp F9>;
-            layers = <FUNC>;
-        };
-
-        f10 {
-            timeout-ms = <50>;
-            key-positions = <2 3>;
-            bindings = <&kp F10>;
-            layers = <FUNC>;
-        };
-
         f11 {
             timeout-ms = <50>;
             key-positions = <20 21>;
@@ -353,7 +339,7 @@
         function_layer {
             bindings = <
 &kp F1     &kp F2     &kp F3     &kp F4     &kp F5       &bt BT_SEL 0  &msc SCRL_DOWN  &mmv MOVE_UP    &msc SCRL_UP     &kp LS(LG(LC(N4)))
-&kp LCTRL  &mkp MCLK  &mkp RCLK  &mkp LCLK  &bootloader  &bt BT_NXT    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &kp LS(LG(N5))
+&kp F9  &kp F10  &mkp RCLK  &mkp LCLK  &mkp MCLK  &bt BT_NXT    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &kp LCTRL
            &kp F6     &kp F7     &kp F8     &none        &none         &kp LSHFT       &kp LGUI        &kp LALT
             >;
         };
